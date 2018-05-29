@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[jQuery(document).ready(function(){
+	jQuery('#booya').click(function(){
+		var submitObj = {
+			"sysid":g_form.getUniqueValue(),
+			"word": jQuery('#word').val(),
+			"replacement": jQuery('#replacement').val()
+		};
+		console.log(submitObj);
+		var ga = new GlideAjax('x_8821_glide_utils.GlideUtils');
+		ga.addParam('sysparm_name', 'replaceText');
+		ga.addParam('sysparm_obj', JSON.stringify(submitObj));
+		ga.getXML(handleResponse);
+
+		function handleResponse(response){
+			var responseDocument = response.responseXML.documentElement;
+			var answer = responseDocument.getAttribute('answer');
+			var serverObj = JSON.parse(answer);
+			console.log(serverObj);
+			if(serverObj.success){
+				var o = GlideModal.prototype.get('replaceText'); 
+				o.destroy();  // closes the pop up in the platfor
+				location = location;
+			} else {
+				jQuery('#replaceInfo').toggleClass('hidden');
+				jQuery('#replaceInfo').text(serverObj.message);
+			}
+		}
+
+
+	});
+});]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_8821_glide_utils_replaceText.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<div class="alert alert-danger hidden" role="alert" id="replaceInfo">
+	</div>
+	<div class="container">
+		<div class="row">
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="word">Replace this</label>  
+				<div class="col-md-4">
+					<input id="word" 
+						   name="word" 
+						   placeholder="placeholder" 
+						   class="form-control input-md" 
+						   type="text" 
+						   value="${word}"
+						   />
+				</div>
+			</div>
+		</div>
+		<br/>
+		<div class="row">
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="replacement">With this</label>  
+				<div class="col-md-4">
+					<input 
+						   id="replacement" 
+						   name="replacement" 
+						   placeholder="placeholder" 
+						   class="form-control input-md" 
+						   type="text" 
+						   value="${replacement}"
+						   />
+					<!--<span class="help-block">help</span>-->
+				</div>
+			</div>
+		</div>
+		<br/>
+		<div class="row">
+			<!-- Button (Double) -->
+			<div class="form-group">
+				<div class="col-md-4"></div>
+				<!--<label class="col-md-4 control-label" for="button1id"></label>-->
+				<div class="col-md-4">
+					<button id="booya" name="booya" class="btn btn-danger" style="float:right;">Replace</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</j:jelly>]]></html>
+        <name>replaceText</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-05-29 15:22:11</sys_created_on>
+        <sys_id>97776d3e0f521300fc69cdbce1050e8b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>replaceText</sys_name>
+        <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
+        <sys_update_name>sys_ui_page_97776d3e0f521300fc69cdbce1050e8b</sys_update_name>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-05-29 15:23:22</sys_updated_on>
+    </sys_ui_page>
+</record_update>
