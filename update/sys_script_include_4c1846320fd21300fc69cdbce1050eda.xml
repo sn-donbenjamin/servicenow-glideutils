@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_8821_glide_utils.variableHelper</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>variableHelper</name>
+        <script><![CDATA[var variableHelper = Class.create();
+variableHelper.prototype = {
+	initialize: function() {
+	},
+	getVariables: function(){
+		if(!this.variableOptions){
+			this.variableOptions = {
+				returnEmpty: false,
+				includeThese: {
+					"1": "string",//yes/no
+					"2": "string",//multi-line text
+					"3": "string",//multiple choice
+					"4": "string",//numeric scale
+					"5": "string",//select box
+					"6": "string",//single line text
+					"7": "string",//checkbox
+					"8": "reference",//reference
+					"9": "string",//date
+					"10": "string",//date time
+					//"11":"string",//label
+					//"12":"string",//break
+					//"13":"string",//not listed
+					//"14":"string",//macro
+					//"15":"string",//ui page
+					"16": "string",//wide single line text
+					//17:"string",//macro w/label
+					"18": "lookupSelectBox",//lookup select box
+					//"19":"string",//container start
+					//"20":"string",//container end
+					"21": "listCollector",//list collector
+					"22": "string"//lookup multiplechoice
+				},
+			};
+		}
+		var returnObj = {};
+		if(current){
+			returnObj.vars = [];
+			var v = new GlideRecord('sc_item_option_mtom');
+			v.addQuery('request_item', current.getValue('sys_id'));
+			v.orderBy('sc_item_option.order');
+			v.query();
+			while (v.next()) {
+				/*
+				* This code dynamically pulls the questions from the forms in the order they are presented (numerically)
+				* and then displays them in a consistant readable format.
+				* Right now nothing links to any records but can with some slight changes to this code.
+				*/
+				if (v.sc_item_option.value.getDisplayValue() != '' || this.variableOptions.returnEmpty) { /*if the value is blank, don't print*/
+					for(var varType in this.variableOptions.includeThese){
+						if(v.sc_item_option.item_option_new.type == varType){
+							if(this.variableOptions.includeThese[varType] === "string"){
+								returnObj.vars.push({
+									label: v.sc_item_option.item_option_new.getDisplayValue(),
+									value: v.sc_item_option.value.getDisplayValue(),
+									order: v.sc_item_option.order.getDisplayValue()
+								});
+							}
+
+							if(this.variableOptions.includeThese[varType] === "reference"){
+								var referencegr = new GlideRecord(v.sc_item_option.item_option_new.reference);
+								referencegr.addQuery('sys_id', '=', v.sc_item_option.value);
+								referencegr.query();
+								if (referencegr.next()) {
+									returnObj.vars.push({
+										label: v.sc_item_option.item_option_new.getDisplayValue(),
+										value: referencegr.getDisplayValue(),
+										order: v.sc_item_option.order.getDisplayValue()
+									});
+								} else { // if the value is invalid or set to a string that has no matching record.
+									returnObj.vars.push({
+										label: v.sc_item_option.item_option_new.getDisplayValue(),
+										value: v.sc_item_option.value.getDisplayValue(),
+										order: v.sc_item_option.order.getDisplayValue()
+									});
+								}
+							}
+							if(this.variableOptions.includeThese[varType] === "lookupSelectBox"){
+								var lsbgr = new GlideRecord(v.sc_item_option.item_option_new.lookup_table);
+								lsbgr.addQuery('sys_id', '=', v.sc_item_option.value);
+								lsbgr.query();
+								if (lsbgr.next()) {
+									returnObj.vars.push({
+										label: v.sc_item_option.item_option_new.getDisplayValue(),
+										value: lsbgr.getDisplayValue(),
+										order: v.sc_item_option.order.getDisplayValue()
+									});
+								} else { // if the value is invalid or set to a string that has no matching record.
+									returnObj.vars.push({
+										label: v.sc_item_option.item_option_new.getDisplayValue(),
+										value: v.sc_item_option.value.getDisplayValue(),
+										order: v.sc_item_option.order.getDisplayValue()
+									});
+								}
+							}
+							if(this.variableOptions.includeThese[varType] === "listCollector"){
+								var listArray = v.sc_item_option.value.getDisplayValue().split(',');
+								var listValues = [];
+								vtp += '<p><b>' + v.sc_item_option.item_option_new.getDisplayValue() + '</b></p>\n';
+								for (i = 0; i < listArray.length; i = i + 1) {
+									var igr = new GlideRecord(v.sc_item_option.item_option_new.list_table);
+									igr.addQuery('sys_id', '=', listArray[i]);
+									igr.query();
+									if (igr.next()) {
+										listValues.push(igr.getDisplayValue());//displayValues
+									}
+									//vtp +=  'i = ' + i + '- ' + listarray<i> + '\n';//sys_ids
+								}
+								returnObj.vars.push({
+									label: v.sc_item_option.item_option_new.getDisplayValue(),
+									value: listValues,
+									order: v.sc_item_option.order.getDisplayValue()
+								});
+							}
+						}
+					}
+
+				}
+			}
+		} else { // current undefined
+			returnObj.error = "current was not defined";
+		}
+		return returnObj;
+	},
+	type: 'variableHelper'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-05-29 18:24:35</sys_created_on>
+        <sys_id>4c1846320fd21300fc69cdbce1050eda</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>variableHelper</sys_name>
+        <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
+        <sys_update_name>sys_script_include_4c1846320fd21300fc69cdbce1050eda</sys_update_name>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-05-29 18:33:00</sys_updated_on>
+    </sys_script_include>
+</record_update>

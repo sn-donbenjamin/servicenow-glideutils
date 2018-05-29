@@ -70,7 +70,7 @@ GlideUtils.prototype = Object.extendsObject(AbstractAjaxProcessor, {
 			returnObj.table = queryObj.table;
 		}
 		if(!queryObj.fields || queryObj.fields.length === 0){
-			reuturnObj = {
+			returnObj = {
 				status: 'error',
 				reason: 'No fields defined'
 			};
@@ -99,7 +99,7 @@ GlideUtils.prototype = Object.extendsObject(AbstractAjaxProcessor, {
 				row[field] = {};
 				if(gr.isValidField(field)){
 					row[field].value = gr.getValue(field);
-					row[field].dispay = gr[field].getDisplayValue();
+					row[field].display = gr[field].getDisplayValue();
 				} else {
 					row[field].error = 'not a valid field';
 				}
@@ -143,13 +143,13 @@ GlideUtils.prototype = Object.extendsObject(AbstractAjaxProcessor, {
         <sys_created_by>jace.benson@protonmail.com</sys_created_by>
         <sys_created_on>2018-05-29 15:23:00</sys_created_on>
         <sys_id>30b7ed3e0f521300fc69cdbce1050ef2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>GlideUtils</sys_name>
         <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
         <sys_update_name>sys_script_include_30b7ed3e0f521300fc69cdbce1050ef2</sys_update_name>
         <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
-        <sys_updated_on>2018-05-29 15:23:00</sys_updated_on>
+        <sys_updated_on>2018-05-29 18:36:13</sys_updated_on>
     </sys_script_include>
 </record_update>
