@@ -1,60 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="sys_script_include">
     <sys_script_include action="INSERT_OR_UPDATE">
-        <access>package_private</access>
+        <access>public</access>
         <active>true</active>
         <api_name>x_8821_glide_utils.GlideUtils</api_name>
         <client_callable>true</client_callable>
         <description/>
         <name>GlideUtils</name>
         <script><![CDATA[var GlideUtils = Class.create();
-GlideUtils.prototype = Object.extendsObject(AbstractAjaxProcessor, {
-	replaceText:      function (){
-		var result = {
-			origObj: this.getParameter('sysparm_obj'),
-			success: false
-		};
-		var obj = JSON.parse(this.getParameter('sysparm_obj'));
-		var sysid = obj.sysid;
-		var word = obj.word;
-		var replacement = obj.replacement;
-		var fields = ['comments','work_notes'];
-		var regex = new RegExp(word);
-		if(sysid && word && replacement) {
-			var journal = new GlideRecord('sys_journal_field');
-			journal.addQuery('element_id', sysid);
-			journal.addQuery('elementIN', fields);
-			journal.addQuery('valueLIKE' + word);
-			journal.query();
-			while(journal.next()){
-			  var journalText = journal.getValue('value');
-			  journalText.replace(regex, replacement);
-			  journal.setValue('value', journalText.replace(regex, replacement));
-			  journal.update();
-			}
-			var audit = new GlideRecord('sys_audit');
-			audit.addQuery('documentkey', sysid);
-			audit.addQuery('fieldnameIN', fields);
-			audit.addQuery('newvalueLIKE' + word);
-			audit.query();
-			while(audit.next()){
-			  var auditText = audit.getValue('newvalue');
-			  auditText.replace(regex, replacement);
-			  audit.setValue('newvalue', auditText.replace(regex, replacement));
-			  audit.update();
-			}
-			var history = new GlideRecord('sys_history_set');
-			history.addQuery('id', sysid);
-			history.query();
-			if(history.next()){
-			  history.deleteRecord();
-			}
-			result.success = true;
-		} else {
-			result.success = false;
-			result.message = 'Word and replacement must be set.';
-		}
-		return JSON.stringify(result);
+GlideUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	initialize: function(request, responseXML, gc) {
+		global.AbstractAjaxProcessor.prototype.initialize.call(this, request, responseXML, gc);
+		// Your code
 	},
 	GlideRecord:      function () {
 		var queryObj = JSON.parse(this.getParameter('sysparm_obj'));
@@ -70,7 +27,7 @@ GlideUtils.prototype = Object.extendsObject(AbstractAjaxProcessor, {
 			returnObj.table = queryObj.table;
 		}
 		if(!queryObj.fields || queryObj.fields.length === 0){
-			returnObj = {
+			reuturnObj = {
 				status: 'error',
 				reason: 'No fields defined'
 			};
@@ -82,32 +39,76 @@ GlideUtils.prototype = Object.extendsObject(AbstractAjaxProcessor, {
 		}
 		return JSON.stringify(returnObj);
 	},
-	GlideAggregate:   function (table, query, fields) {},
 	_GlideRecord:     function (queryObj) {
-		var returnRows = [];
-		var gr = new GlideRecordSecure(queryObj.table);
-		if(queryObj.query){
-			gr.addEncodedQuery(queryObj.query);
+		try{
+			var returnRows = [];
+			var gr = new GlideRecordSecure(queryObj.table);
+			if(queryObj.query){
+				gr.addEncodedQuery(queryObj.query);
+			}
+			if(queryObj.limit){
+				gr.setLimit(queryObj.limit);
+			}
+			gr.query();
+			gs.info(JSON.stringify(queryObj));
+			gs.info("gr.hasNext(): " + gr.hasNext());
+			while(gr.next()){
+				var row = {};
+				queryObj.fields.map(function(field){
+					gs.info("Looping over fields, on " + field);
+					row[field] = {};
+					if(gr.isValidField(field)){
+						gs.info(field + " is a valid field");
+						row[field].value = gr.getValue(field);
+						row[field].display = gr[field].getDisplayValue();
+					} else {
+						gs.info(field + " is not a valid field");
+						if(field.indexOf('.')>0){
+							gs.info("field contains .");
+							var fieldsArr = field.split('.');
+
+							if(fieldsArr.length>2){
+								row[field].error = 'Cannot dot-walk more than one-level';
+							} else {
+								//GlideRecord only allows for one nested level it seems
+								row[field].value = gr[fieldsArr[0]][fieldsArr[1]].toString();//getValue isnt a thing in scopes i guess
+								row[field].display = gr[fieldsArr[0]][fieldsArr[1]].getDisplayValue();
+							}
+							//fieldsArr = ["manager.department"]
+							// the below doesnt work, but the idea to allow n number of .'s	where n is infinity
+							/*
+						row[field].debug = [];
+						fieldsArr.map(function(dotField){
+							gs.info("Looping over dotfield: " + dotField);
+							gs.info("gr[dotField].getReferenceTable(): " + gr[dotField].getReferenceTable());
+							gs.info("gr[dotField].getValue(): " + gr[dotField].getValue());
+							var faGR = new GlideRecord(gr[dotField].getReferenceTable());
+							if(faGR.get(gr[dotField].getValue())){
+								gs.info("IN GET of faGR"+faGR[dotField].getValue())
+								// {"manager: {department: }}
+								row[field][dotField]= {
+									value: faGR[dotField].getValue(),
+									display: faGR[dotField].getDisplayValue()
+								};
+
+							} else {
+								gs.info("COULD NOT FIND faGR by sysid");
+							}
+						})
+						*/
+						} else {
+							row[field].error = 'not a valid field';
+						}
+					}
+				});//no functions in a loop... really?!
+				returnRows.push(row);
+			}
+			return returnRows;
+		} catch (error){
+			return error;
 		}
-		if(queryObj.limit){
-			gr.setLimit(queryObj.limit);
-		}
-		gr.query();
-		while(gr.next()){
-			var row = {};
-			queryObj.fields.map(function(field){
-				row[field] = {};
-				if(gr.isValidField(field)){
-					row[field].value = gr.getValue(field);
-					row[field].display = gr[field].getDisplayValue();
-				} else {
-					row[field].error = 'not a valid field';
-				}
-			});
-			returnRows.push(row);
-		}
-		return returnRows;
 	},
+	GlideAggregate:   function (table, query, fields) {},
 	_GlideAggregate:  function (table, query, fields) {},
 	get:              function () {
 		var returnObj = {
@@ -137,19 +138,66 @@ GlideUtils.prototype = Object.extendsObject(AbstractAjaxProcessor, {
 		}
 		return JSON.stringify(returnObj);
 	},
+	replaceText:      function (){
+		var result = {
+			origObj: this.getParameter('sysparm_obj'),
+			success: false
+		};
+		var obj = JSON.parse(this.getParameter('sysparm_obj'));
+		var sysid = obj.sysid;
+		var word = obj.word;
+		var replacement = obj.replacement;
+		var fields = ['comments','work_notes'];
+		var regex = new RegExp(word);
+		if(sysid && word && replacement) {
+			var journal = new GlideRecord('sys_journal_field');
+			journal.addQuery('element_id', sysid);
+			journal.addQuery('elementIN', fields);
+			journal.addQuery('valueLIKE' + word);
+			journal.query();
+			while(journal.next()){
+				var journalText = journal.getValue('value');
+				journalText.replace(regex, replacement);
+				journal.setValue('value', journalText.replace(regex, replacement));
+				journal.update();
+			}
+			var audit = new GlideRecord('sys_audit');
+			audit.addQuery('documentkey', sysid);
+			audit.addQuery('fieldnameIN', fields);
+			audit.addQuery('newvalueLIKE' + word);
+			audit.query();
+			while(audit.next()){
+				var auditText = audit.getValue('newvalue');
+				auditText.replace(regex, replacement);
+				audit.setValue('newvalue', auditText.replace(regex, replacement));
+				audit.update();
+			}
+			var history = new GlideRecord('sys_history_set');
+			history.addQuery('id', sysid);
+			history.query();
+			if(history.next()){
+				history.deleteRecord();
+			}
+			result.success = true;
+		} else {
+			result.success = false;
+			result.message = 'Word and replacement must be set.';
+		}
+		return JSON.stringify(result);
+	},
 	type: 'GlideUtils'
 });]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>jace.benson@protonmail.com</sys_created_by>
         <sys_created_on>2018-05-29 15:23:00</sys_created_on>
         <sys_id>30b7ed3e0f521300fc69cdbce1050ef2</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>GlideUtils</sys_name>
         <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
         <sys_update_name>sys_script_include_30b7ed3e0f521300fc69cdbce1050ef2</sys_update_name>
         <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
-        <sys_updated_on>2018-05-29 18:36:13</sys_updated_on>
+        <sys_updated_on>2018-06-21 22:05:41</sys_updated_on>
     </sys_script_include>
 </record_update>
