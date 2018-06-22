@@ -20,7 +20,7 @@ variableHelper.prototype = {
 					"2": "string",//multi-line text
 					"3": "string",//multiple choice
 					"4": "string",//numeric scale
-					"5": "string",//select box
+					"5": "select",//select box
 					"6": "string",//single line text
 					"7": "string",//checkbox
 					"8": "reference",//reference
@@ -61,6 +61,23 @@ variableHelper.prototype = {
 								returnObj.vars.push({
 									label: v.sc_item_option.item_option_new.getDisplayValue(),
 									value: v.sc_item_option.value.getDisplayValue(),
+									order: v.sc_item_option.order.getDisplayValue()
+								});
+							}
+							if(this.variableOptions.includeThese[varType] === "select"){
+								var questionValue = '';
+								var question_choice = new GlideRecord('question_choice');
+								question_choice.addQuery('question', v.sc_item_option.item_option_new.toString());
+								question_choice.addQuery('value', v.sc_item_option.value.toString());
+								question_choice.query();
+								if(question_choice.next()){
+									questionValue = question_choice.getValue('text');//if its a choice
+								} else {
+									questionValue = v.sc_item_option.value.getDisplayValue();//if it cant be found show value stored
+								}
+								returnObj.vars.push({
+									label: v.sc_item_option.item_option_new.getDisplayValue(),
+									value: questionValue,
 									order: v.sc_item_option.order.getDisplayValue()
 								});
 							}
@@ -136,13 +153,13 @@ variableHelper.prototype = {
         <sys_created_by>jace.benson@protonmail.com</sys_created_by>
         <sys_created_on>2018-05-29 18:24:35</sys_created_on>
         <sys_id>4c1846320fd21300fc69cdbce1050eda</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>variableHelper</sys_name>
         <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
         <sys_update_name>sys_script_include_4c1846320fd21300fc69cdbce1050eda</sys_update_name>
         <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
-        <sys_updated_on>2018-05-29 18:33:00</sys_updated_on>
+        <sys_updated_on>2018-06-22 14:21:58</sys_updated_on>
     </sys_script_include>
 </record_update>
