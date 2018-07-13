@@ -108,66 +108,19 @@ GlideUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
             return error;
         }
 	},
-    replaceText: function() {
-        var result = {
-            origObj: this.getParameter('sysparm_obj'),
-            success: false
-        };
-        var obj = JSON.parse(this.getParameter('sysparm_obj'));
-        var sysid = obj.sysid;
-        var word = obj.word;
-        var replacement = obj.replacement;
-        var fields = ['comments', 'work_notes'];
-        var regex = new RegExp(word);
-        if (sysid && word && replacement) {
-            var journal = new GlideRecord('sys_journal_field');
-            journal.addQuery('element_id', sysid);
-            journal.addQuery('elementIN', fields);
-            journal.addQuery('valueLIKE' + word);
-            journal.query();
-            while (journal.next()) {
-                var journalText = journal.getValue('value');
-                journalText.replace(regex, replacement);
-                journal.setValue('value', journalText.replace(regex, replacement));
-                journal.update();
-            }
-            var audit = new GlideRecord('sys_audit');
-            audit.addQuery('documentkey', sysid);
-            audit.addQuery('fieldnameIN', fields);
-            audit.addQuery('newvalueLIKE' + word);
-            audit.query();
-            while (audit.next()) {
-                var auditText = audit.getValue('newvalue');
-                auditText.replace(regex, replacement);
-                audit.setValue('newvalue', auditText.replace(regex, replacement));
-                audit.update();
-            }
-            var history = new GlideRecord('sys_history_set');
-            history.addQuery('id', sysid);
-            history.query();
-            if (history.next()) {
-                history.deleteRecord();
-            }
-            result.success = true;
-        } else {
-            result.success = false;
-            result.message = 'Word and replacement must be set.';
-        }
-        return JSON.stringify(result);
-    },
     type: 'GlideUtils'
 });]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>jace.benson@protonmail.com</sys_created_by>
         <sys_created_on>2018-05-29 15:23:00</sys_created_on>
         <sys_id>30b7ed3e0f521300fc69cdbce1050ef2</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>GlideUtils</sys_name>
         <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
         <sys_update_name>sys_script_include_30b7ed3e0f521300fc69cdbce1050ef2</sys_update_name>
         <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
-        <sys_updated_on>2018-06-22 21:04:00</sys_updated_on>
+        <sys_updated_on>2018-07-13 19:04:18</sys_updated_on>
     </sys_script_include>
 </record_update>
