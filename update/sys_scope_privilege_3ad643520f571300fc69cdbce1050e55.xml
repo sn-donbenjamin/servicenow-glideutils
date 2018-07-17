@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="sys_scope_privilege">
     <sys_scope_privilege action="INSERT_OR_UPDATE">
-        <operation>write</operation>
+        <operation>execute</operation>
         <source_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</source_scope>
         <status>allowed</status>
         <sys_class_name>sys_scope_privilege</sys_class_name>
         <sys_created_by>jace.benson@protonmail.com</sys_created_by>
-        <sys_created_on>2018-07-13 14:58:02</sys_created_on>
-        <sys_id>cb9151150f131300fc69cdbce1050ed7</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>task</sys_name>
+        <sys_created_on>2018-07-17 02:04:13</sys_created_on>
+        <sys_id>3ad643520f571300fc69cdbce1050e55</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GlideRecord.update</sys_name>
         <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
         <sys_policy/>
         <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
-        <sys_update_name>sys_scope_privilege_cb9151150f131300fc69cdbce1050ed7</sys_update_name>
+        <sys_update_name>sys_scope_privilege_3ad643520f571300fc69cdbce1050e55</sys_update_name>
         <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
-        <sys_updated_on>2018-07-17 01:41:45</sys_updated_on>
-        <target_name>task</target_name>
+        <sys_updated_on>2018-07-17 02:04:13</sys_updated_on>
+        <target_name>GlideRecord.update</target_name>
         <target_scope display_value="Global">global</target_scope>
-        <target_type>sys_db_object</target_type>
+        <target_type>scriptable</target_type>
     </sys_scope_privilege>
 </record_update>

@@ -26,7 +26,8 @@
         <script><![CDATA[function openReplaceFx(){
 	var sysid = g_form.getUniqueValue();
 	var dialogClass = GlideModal;
-	var modalDialog = new dialogClass("replaceText");
+	//var modalDialog = new dialogClass("replaceText");
+	var modalDialog = new dialogClass("x_8821_glide_utils_replaceText");
 	modalDialog.setTitle("Replace Text");
 	//modalDialog.setPreference('sysid',g_form.getValue('sys_id'));
 	modalDialog.setPreference("sysid", sysid);
@@ -43,7 +44,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>96e7a17e0f521300fc69cdbce1050e30</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Replace Text</sys_name>
         <sys_overrides/>
         <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
@@ -51,7 +52,7 @@
         <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
         <sys_update_name>sys_ui_action_96e7a17e0f521300fc69cdbce1050e30</sys_update_name>
         <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
-        <sys_updated_on>2018-06-16 08:18:38</sys_updated_on>
+        <sys_updated_on>2018-07-17 01:28:03</sys_updated_on>
         <table>task</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>
