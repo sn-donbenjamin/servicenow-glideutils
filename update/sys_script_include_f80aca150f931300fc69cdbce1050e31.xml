@@ -9,18 +9,7 @@
         <name>replace</name>
         <script><![CDATA[var replace = Class.create();
 replace.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
-	canCRUD: function(){
-	    var crud = []; 
-		crud.push(this.canCRUD('sys_journal_field'));
-		crud.push(this.canCRUD('sys_audit'));
-		crud.push(this.canCRUD('sys_history_set'));
-		if(crud.indexOf(false)>=0){
-			return false;
-		} else {
-			return true;
-		}
-	},
-	_canCRUD: function(table) {
+	canCRUD: function(table) {
 		var sys_db_object = new GlideRecord('sys_db_object');
 		var query = 'name=' + table + '^create_access=true^delete_access=true^read_access=true^update_access=true';
 		sys_db_object.addEncodedQuery(query);
@@ -33,7 +22,11 @@ replace.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 				origObj: this.getParameter('sysparm_obj'),
 				success: false
 			};
-			if(this.canCRUD() === true){
+			var crud = []; 
+			crud.push(this.canCRUD('sys_journal_field'));
+			crud.push(this.canCRUD('sys_audit'));
+			crud.push(this.canCRUD('sys_history_set'));
+			if(crud.indexOf(false)>=0){
 				var message = '';
 				message += 'Permissions not updated on sys_journal_field, sys_audit, ';
 				message += 'or sys_history_set.  Allow Create, Update, Read, and ';
@@ -98,13 +91,13 @@ replace.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>jace.benson@protonmail.com</sys_created_by>
         <sys_created_on>2018-07-13 19:05:46</sys_created_on>
         <sys_id>f80aca150f931300fc69cdbce1050e31</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>replace</sys_name>
         <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
         <sys_update_name>sys_script_include_f80aca150f931300fc69cdbce1050e31</sys_update_name>
         <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
-        <sys_updated_on>2018-07-17 02:42:30</sys_updated_on>
+        <sys_updated_on>2018-07-17 02:51:55</sys_updated_on>
     </sys_script_include>
 </record_update>
