@@ -43,6 +43,7 @@ replace.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 					return JSON.stringify(result);
 				} else {
 					var obj = JSON.parse(result.origObj);
+					result.parsedObj = obj;
 					var sysid = obj.sysid;
 					var word = obj.word;
 					var replacement = obj.replacement;
@@ -59,17 +60,21 @@ replace.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 							var newText = journalText.replace(regex, replacement);
 							journal.setValue('value', journalText.replace(regex, replacement));
 							journal.update();
+							result.journal = journal.getLink();
 						}
 						var audit = new GlideRecord('sys_audit');
 						audit.addQuery('documentkey', sysid);
-						audit.addQuery('fieldnameIN', fields);
-						audit.addQuery('newvalueLIKE' + word);
+						audit.addQuery('fieldname', 'IN', fields);
+						audit.addQuery('newvalue', 'CONTAINS', word);
+						result.auditQuery = audit.getEncodedQuery();
 						audit.query();
+						result.audits = [];
 						while (audit.next()) {
 							var auditText = audit.getValue('newvalue');
-							auditText.replace(regex, replacement);
-							audit.setValue('newvalue', auditText.replace(regex, replacement));
+							var newAuditText = auditText.replace(regex, replacement);
+							audit.setValue('newvalue', newAuditText);
 							audit.update();
+							result.audits.push(audit.getLink());
 						}
 						var history = new GlideRecord('sys_history_set');
 						history.addQuery('id', sysid);
@@ -98,13 +103,13 @@ replace.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>jace.benson@protonmail.com</sys_created_by>
         <sys_created_on>2018-07-13 19:05:46</sys_created_on>
         <sys_id>f80aca150f931300fc69cdbce1050e31</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>33</sys_mod_count>
         <sys_name>replace</sys_name>
         <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
         <sys_update_name>sys_script_include_f80aca150f931300fc69cdbce1050e31</sys_update_name>
         <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
-        <sys_updated_on>2018-07-20 02:16:57</sys_updated_on>
+        <sys_updated_on>2018-07-20 04:04:51</sys_updated_on>
     </sys_script_include>
 </record_update>
