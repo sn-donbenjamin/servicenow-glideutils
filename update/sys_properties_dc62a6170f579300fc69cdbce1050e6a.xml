@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices>true,false</choices>
+        <description>This controls weather or not the `x_8821_glide_utils.replace` script include, and `Replace Text` UI action is available.  If true, they are enabled, if false, they are disabled.</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_8821_glide_utils.enable.replace</name>
+        <read_roles/>
+        <suffix>enable.replace</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-07-20 01:59:15</sys_created_on>
+        <sys_id>dc62a6170f579300fc69cdbce1050e6a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>x_8821_glide_utils.enable.replace</sys_name>
+        <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
+        <sys_update_name>sys_properties_dc62a6170f579300fc69cdbce1050e6a</sys_update_name>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-07-20 02:52:24</sys_updated_on>
+        <type>choicelist</type>
+        <value>true</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=dc62a6170f579300fc69cdbce1050e6a"/>
+</record_update>

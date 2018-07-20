@@ -23,14 +23,14 @@
         <sys_created_by>jace.benson@protonmail.com</sys_created_by>
         <sys_created_on>2018-05-29 15:21:16</sys_created_on>
         <sys_id>e46761ba0f521300fc69cdbce1050e46</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
-        <sys_updated_on>2018-05-29 15:21:16</sys_updated_on>
+        <sys_updated_on>2018-07-20 02:32:24</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <user_role/>
         <vendor/>
         <vendor_prefix/>
-        <version>1.0.0</version>
+        <version>2.0.0</version>
     </sys_app>
 </record_update>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices>true,false</choices>
+        <description>This controls weather or not the Show JSON context item is available (globally) and the Show JSON UI Action is on Task.  If true, it's enabled, if false, it's disabled.</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_8821_glide_utils.enable.showJSON</name>
+        <read_roles/>
+        <suffix>enable.showJSON</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-07-20 02:44:37</sys_created_on>
+        <sys_id>0cec265b0f579300fc69cdbce1050e7f</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>x_8821_glide_utils.enable.showJSON</sys_name>
+        <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
+        <sys_update_name>sys_properties_0cec265b0f579300fc69cdbce1050e7f</sys_update_name>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-07-20 03:19:17</sys_updated_on>
+        <type>choicelist</type>
+        <value>true</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=0cec265b0f579300fc69cdbce1050e7f"/>
+</record_update>

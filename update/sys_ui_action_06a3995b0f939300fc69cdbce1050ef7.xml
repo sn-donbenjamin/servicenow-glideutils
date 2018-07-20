@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update sys_domain="global" table="sys_ui_action">
     <sys_ui_action action="INSERT_OR_UPDATE">
-        <action_name/>
+        <action_name>show_json</action_name>
         <active>true</active>
         <client>true</client>
         <comments/>
-        <condition>gs.hasRole('admin') &amp;&amp; gs.getProperty('x_8821_glide_utils.enable.replace') === "true"</condition>
+        <condition>gs.hasRole('admin') &amp;&amp; gs.getProperty('x_8821_glide_utils.enable.showJSON') === "true"</condition>
         <form_action>true</form_action>
-        <form_button>true</form_button>
-        <form_context_menu>false</form_context_menu>
+        <form_button>false</form_button>
+        <form_context_menu>true</form_context_menu>
         <form_link>false</form_link>
         <form_style/>
         <hint/>
@@ -20,19 +20,22 @@
         <list_link>false</list_link>
         <list_save_with_form_button>false</list_save_with_form_button>
         <list_style/>
-        <name>Replace Text</name>
-        <onclick>openReplaceFx()</onclick>
+        <name>Show JSON</name>
+        <onclick>openJSON()</onclick>
         <order>100</order>
-        <script><![CDATA[function openReplaceFx(){
-	var sysid = g_form.getUniqueValue();
-	var dialogClass = GlideModal;
-	//var modalDialog = new dialogClass("replaceText");
-	var modalDialog = new dialogClass("x_8821_glide_utils_replaceText");
-	modalDialog.setTitle("Replace Text");
-	//modalDialog.setPreference('sysid',g_form.getValue('sys_id'));
-	modalDialog.setPreference("sysid", sysid);
-	modalDialog.setSize(700, 400);
-	modalDialog.render();
+        <script><![CDATA[function openJSON(){
+	try{
+		var sys_id = g_form.getUniqueValue();
+		var table = g_form.getTableName();
+		var url = 'https://';
+		url += top.document.domain + '/' + table + '_list.do' + '?sysparm_query=';
+		url += 'sys_id=' + sys_id + '&JSONv2&sysparm_domain_restore=false&sysparm_stack=no';
+		var windowName = 'jsonview';
+		top.window.open(url, windowName, 'height=500,width=700');
+	} catch (er) {
+		console.error('some error' + er);
+	}
+
 }]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
@@ -40,21 +43,21 @@
         <show_update>true</show_update>
         <sys_class_name>sys_ui_action</sys_class_name>
         <sys_created_by>jace.benson@protonmail.com</sys_created_by>
-        <sys_created_on>2018-05-29 15:24:25</sys_created_on>
+        <sys_created_on>2018-07-19 20:16:10</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>96e7a17e0f521300fc69cdbce1050e30</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name>Replace Text</sys_name>
+        <sys_id>06a3995b0f939300fc69cdbce1050ef7</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Show JSON</sys_name>
         <sys_overrides/>
         <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
         <sys_policy/>
         <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
-        <sys_update_name>sys_ui_action_96e7a17e0f521300fc69cdbce1050e30</sys_update_name>
+        <sys_update_name>sys_ui_action_06a3995b0f939300fc69cdbce1050ef7</sys_update_name>
         <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
-        <sys_updated_on>2018-07-20 02:12:16</sys_updated_on>
+        <sys_updated_on>2018-07-20 03:17:40</sys_updated_on>
         <table>task</table>
         <ui11_compatible>true</ui11_compatible>
-        <ui16_compatible>true</ui16_compatible>
+        <ui16_compatible>false</ui16_compatible>
     </sys_ui_action>
 </record_update>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_8821_glide_utils_properties.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+    <script>
+        /* here I can script what happens onclick of the "connect" button. */
+    </script>
+    <style type="text/css">
+        .props {
+            /*width: 34em;*/
+            margin: 0 auto;
+            margin-top: 1em;
+            padding: 1em;
+            padding-top: 0;
+            border: 1px solid lightgrey;
+            border-radius: 4px;
+        }
+        #logo {
+            padding: 3em 1em 1em 1em;
+            margin: auto;
+        }
+        label {
+            font-size: 18px;
+        }
+        input, select {
+            display: block;
+            width: 100% !important; 
+            height: 32px;
+            padding: 6px 9px;
+            font-size: 13px;
+            line-height: 1.42857;
+            color: #343d47;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #bdc0c4;
+            border-radius: 3px;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <form action="system_properties_update.do" method="POST">
+        <input name="referer" id="referer" type="HIDDEN" value="/x_8821_glide_utils_properties.do"/>
+        <div class="props">
+            <!--<div id="logo">
+                <img src="your_logo_135w.png" width="135" class="center"/>
+            </div>-->
+            <g2:system_properties_categorized category="GlideUtils Properties"/>
+            <div class="form-group">
+                <div class="form-field input_controls">
+                    <button class="listactions btn btn-primary" type="submit" name="action">${gs.getMessage("Save")}</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</j:jelly>
+
+]]></html>
+        <name>properties</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-07-20 02:27:01</sys_created_on>
+        <sys_id>aa78625b0f579300fc69cdbce1050ea2</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>properties</sys_name>
+        <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
+        <sys_update_name>sys_ui_page_aa78625b0f579300fc69cdbce1050ea2</sys_update_name>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-07-20 02:48:56</sys_updated_on>
+    </sys_ui_page>
+</record_update>
