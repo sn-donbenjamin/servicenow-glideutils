@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="catalog_script_client">
+    <catalog_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_catalog>true</applies_catalog>
+        <applies_extended>false</applies_extended>
+        <applies_req_item>true</applies_req_item>
+        <applies_sc_task>true</applies_sc_task>
+        <applies_target_record>false</applies_target_record>
+        <applies_to>item</applies_to>
+        <cat_item display_value="Test Item">585101000f235300fc69cdbce1050efb</cat_item>
+        <cat_variable>IO:8eff9d800f635300fc69cdbce1050e6f</cat_variable>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <messages/>
+        <name>set Function (param 4)</name>
+        <order/>
+        <script><![CDATA[/* global onChange, g_form */
+function onChange(control, oldValue, newValue, isLoading) {
+  if (isLoading) {
+    return;
+  }
+  var paramsWithValues = 0;
+  var params = {};
+  for (var i = 1; i <= 4; i++) {
+    var paramName = 'param' + i;
+    if (g_form.getValue(paramName) != '') {
+      paramsWithValues++;
+      params[paramsWithValues] = g_form.getValue(paramName);
+    }
+  }
+  var method = g_form.getValue('method').split(':')[0];
+  var functionStr = 'g_form.' + method;
+  var functionParams = '';
+  if (paramsWithValues === 0) {
+    functionParams = '()';
+  }
+  if (paramsWithValues === 1) {
+    functionParams = '("' + params['1'] + '")';
+  }
+  if (paramsWithValues === 2) {
+    functionParams = '("' + params['1'] + '","' + params['2'] + '");';
+  }
+  if (paramsWithValues === 3) {
+    functionParams = '("' + params['1'] + '","' + params['2'] + '","' + params['3'] + '");';
+  }
+  if (paramsWithValues === 4) {
+    functionParams = '("' + params['1'] + '","' + params['2'] + '","' + params['3'] + '","' + params['4'] + '");';
+  }
+  g_form.setValue('function', functionStr + functionParams);
+}]]></script>
+        <sys_class_name>catalog_script_client</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-07-22 05:38:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b9e7e1c40f635300fc69cdbce1050e6f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>set Function (param 4)</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
+        <sys_update_name>catalog_script_client_b9e7e1c40f635300fc69cdbce1050e6f</sys_update_name>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-07-22 06:27:24</sys_updated_on>
+        <table/>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <variable_set/>
+        <view/>
+    </catalog_script_client>
+</record_update>
