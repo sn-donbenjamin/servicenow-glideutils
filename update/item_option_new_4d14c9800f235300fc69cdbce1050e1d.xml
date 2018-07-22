@@ -29,9 +29,9 @@
         <list_table/>
         <lookup_label>name</lookup_label>
         <lookup_price/>
-        <lookup_table>sys_user</lookup_table>
+        <lookup_table>sys_properties</lookup_table>
         <lookup_unique>false</lookup_unique>
-        <lookup_value>sys_id</lookup_value>
+        <lookup_value>name</lookup_value>
         <macro/>
         <mandatory>false</mandatory>
         <map_to_field>false</map_to_field>
@@ -48,7 +48,7 @@
         <record/>
         <record_producer_table/>
         <reference/>
-        <reference_qual>active=true^locked_out=false</reference_qual>
+        <reference_qual>sys_scope=e46761ba0f521300fc69cdbce1050e46</reference_qual>
         <reference_qual_condition/>
         <scale_max>5</scale_max>
         <scale_min>0</scale_min>
@@ -60,14 +60,14 @@
         <sys_created_by>jace.benson@protonmail.com</sys_created_by>
         <sys_created_on>2018-07-22 03:02:12</sys_created_on>
         <sys_id>4d14c9800f235300fc69cdbce1050e1d</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Lookup Select Box</sys_name>
         <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
         <sys_policy/>
         <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
         <sys_update_name>item_option_new_4d14c9800f235300fc69cdbce1050e1d</sys_update_name>
         <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
-        <sys_updated_on>2018-07-22 06:45:03</sys_updated_on>
+        <sys_updated_on>2018-07-22 06:58:53</sys_updated_on>
         <table/>
         <tooltip>Tooltip</tooltip>
         <type>18</type>
