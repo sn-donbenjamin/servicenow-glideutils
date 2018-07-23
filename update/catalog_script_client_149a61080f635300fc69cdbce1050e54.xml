@@ -59,7 +59,7 @@ function onChange(control, oldValue, newValue, isLoading) {
     } catch (error) {
       g_form.addErrorMessage(functionStr + functionParams + ' failed to execute.');
     }
-    g_form.hideFieldMsg('tryit', true);
+    g_form.hideFieldMsg('function', true);
 console.log("result", result);
     g_form.showFieldMsg('function', functionStr + functionParams + '// returns (also in console) "' + result + '"', 'info');
     g_form.setValue('tryit', false);
@@ -72,7 +72,7 @@ console.log("result", result);
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>149a61080f635300fc69cdbce1050e54</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Test Function</sys_name>
         <sys_overrides/>
         <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
@@ -80,7 +80,7 @@ console.log("result", result);
         <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
         <sys_update_name>catalog_script_client_149a61080f635300fc69cdbce1050e54</sys_update_name>
         <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
-        <sys_updated_on>2018-07-22 06:53:41</sys_updated_on>
+        <sys_updated_on>2018-07-23 04:55:14</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>

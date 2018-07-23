@@ -19,37 +19,52 @@
         <order/>
         <script><![CDATA[/* global onChange, g_form */
 function onChange(control, oldValue, newValue, isLoading) {
+console.log('method', newValue);
   if (isLoading) {
     return;
   }
   g_form.clearValue('function');
   var paramsWithValues = 0;
   var params = {};
-  for (var i = 1; i <= 4; i++) {
-    var paramName = 'param' + i;
-    if (g_form.getValue(paramName) != '') {
-      paramsWithValues++;
-      params[paramsWithValues] = g_form.getValue(paramName);
-    }
-  }
   var method = g_form.getValue('method').split(':')[0];
+  var param1 = g_form.getValue('method').split(':')[1];
+  var param2 = g_form.getValue('method').split(':')[2];
+  var param3 = g_form.getValue('method').split(':')[3];
+  var param4 = g_form.getValue('method').split(':')[4];
   var functionStr = 'g_form.' + method;
   var functionParams = '';
   if (paramsWithValues === 0) {
     functionParams = '()';
   }
-  if (paramsWithValues === 1) {
-    functionParams = '("' + params['1'] + '")';
+  if (param1) {
+    functionParams = '("' + param1 + '")';
+    g_form.setValue('param1', param1);
+    g_form.clearValue('param2');
+    g_form.clearValue('param3');
+    g_form.clearValue('param4');
   }
-  if (paramsWithValues === 2) {
-    functionParams = '("' + params['1'] + '","' + params['2'] + '");';
+  if (param2) {
+    functionParams = '("' + param1 + '","' + param2 + '");';
+    g_form.setValue('param1', param1);
+    g_form.setValue('param2', param2);
+    g_form.clearValue('param3');
+    g_form.clearValue('param4');
   }
-  if (paramsWithValues === 3) {
-    functionParams = '("' + params['1'] + '","' + params['2'] + '","' + params['3'] + '");';
+  if (param3) {
+    functionParams = '("' + param1 + '","' + param2 + '","' + param3 + '");';
+    g_form.setValue('param1', param1);
+    g_form.setValue('param2', param2);
+    g_form.setValue('param3', param3);
+    g_form.clearValue('param4');
   }
-  if (paramsWithValues === 4) {
-    functionParams = '("' + params['1'] + '","' + params['2'] + '","' + params['3'] + '","' + params['4'] + '");';
+  if (param4) {
+    functionParams = '("' + param1 + '","' + param2 + '","' + param3 + '","' + param4 + '");';
+    g_form.setValue('param1', param1);
+    g_form.setValue('param2', param2);
+    g_form.setValue('param3', param3);
+    g_form.setValue('param4', param4);
   }
+  
   g_form.setValue('function', functionStr + functionParams);
 }]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
@@ -58,7 +73,7 @@ function onChange(control, oldValue, newValue, isLoading) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>32f761c40f635300fc69cdbce1050e37</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>set Function (method)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
@@ -66,7 +81,7 @@ function onChange(control, oldValue, newValue, isLoading) {
         <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
         <sys_update_name>catalog_script_client_32f761c40f635300fc69cdbce1050e37</sys_update_name>
         <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
-        <sys_updated_on>2018-07-22 06:28:11</sys_updated_on>
+        <sys_updated_on>2018-07-23 13:13:01</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>

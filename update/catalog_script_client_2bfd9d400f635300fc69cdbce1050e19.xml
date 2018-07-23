@@ -4,8 +4,8 @@
         <active>true</active>
         <applies_catalog>true</applies_catalog>
         <applies_extended>false</applies_extended>
-        <applies_req_item>false</applies_req_item>
-        <applies_sc_task>false</applies_sc_task>
+        <applies_req_item>true</applies_req_item>
+        <applies_sc_task>true</applies_sc_task>
         <applies_target_record>false</applies_target_record>
         <applies_to>item</applies_to>
         <cat_item display_value="Test Item">585101000f235300fc69cdbce1050efb</cat_item>
@@ -19,145 +19,145 @@
         <order/>
         <script><![CDATA[function onLoad() {
   var methods = [];
-  methods.push({ name: 'activateTab', params: 0 });
-  methods.push({ name: 'addAttribute', params: 0 });
-  methods.push({ name: 'addDecoration', params: 3 });
-  methods.push({ name: 'addErrorMessage', params: 1 });
-  methods.push({ name: 'addGlideUIElement', params: 0 });
-  methods.push({ name: 'addInfoMessage', params: 1 });
-  methods.push({ name: 'addNameMapEntry', params: 0 });
-  methods.push({ name: 'addOption', params: 4 });
-  methods.push({ name: 'addSecurityReadOnlyFields', params: 0 });
-  methods.push({ name: 'addValidator', params: 0 });
-  methods.push({ name: 'addWarningMessage', params: 1 });
-  methods.push({ name: 'allChangedFieldsFilter', params: 0 });
-  methods.push({ name: 'changedFieldsFilter', params: 0 });
-  methods.push({ name: 'changeElementParent', params: 0 });
-  methods.push({ name: 'changeElementStyle', params: 0 });
-  methods.push({ name: 'clearMessages', params: 0 });
-  methods.push({ name: 'clearOptions', params: 1 });
-  methods.push({ name: 'clearValue', params: 1 });
-  methods.push({ name: 'disable', params: 0 });
-  methods.push({ name: 'disableAttachments', params: 0 });
-  methods.push({ name: 'enable', params: 0 });
-  methods.push({ name: 'enableAttachments', params: 0 });
-  methods.push({ name: 'enableOption', params: 0 });
-  methods.push({ name: 'enableUIPolicyFields', params: 0 });
-  methods.push({ name: 'fieldChanged', params: 0 });
-  methods.push({ name: 'findV2RelatedListName', params: 0 });
-  methods.push({ name: 'flash', params: 0 });
-  methods.push({ name: 'getAction', params: 0 });
-  methods.push({ name: 'getActionName', params: 0 });
-  methods.push({ name: 'getBooleanValue', params: 1 });
-  methods.push({ name: 'getControl', params: 1 });
-  methods.push({ name: 'getControlByForm', params: 0 });
-  methods.push({ name: 'getDecimalValue', params: 1 });
-  methods.push({ name: 'getDerivedFields', params: 0 });
-  methods.push({ name: 'getDisplayBox', params: 1 });
-  methods.push({ name: 'getDisplayValue', params: 1 });
-  methods.push({ name: 'getEditableFields', params: 0 });
-  methods.push({ name: 'getElement', params: 1 });
-  methods.push({ name: 'getEncodedRecord', params: 0 });//...
-  methods.push({ name: 'getFieldNames', params: 0 });
-  methods.push({ name: 'getFormElement', params: 0 });
-  methods.push({ name: 'getGlideUIElement', params: 0 });
-  methods.push({ name: 'getHelpTextControl', params: 0 });
-  methods.push({ name: 'getIntValue', params: 1 });
-  methods.push({ name: 'getLabel', params: 1 });
-  methods.push({ name: 'getLabelOf', params: 1 });
-  methods.push({ name: 'getMissingFields', params: 0 });
-  methods.push({ name: 'getNiBox', params: 0 });
-  methods.push({ name: 'getOption', params: 2 });
-  methods.push({ name: 'getOptionControl', params: 1 });
-  methods.push({ name: 'getParameter', params: 1 });
-  methods.push({ name: 'getPrefixHandler', params: 1 });
-  methods.push({ name: 'getReference', params: 2 });
-  methods.push({ name: 'getRelatedListNames', params: 0 });
-  methods.push({ name: 'getScope', params: 0 });
-  methods.push({ name: 'getSectionNames', params: 0 });
-  methods.push({ name: 'getSections', params: 0 });
-  methods.push({ name: 'getSysId', params: 0 });
-  methods.push({ name: 'getTableName', params: 0 });
-  methods.push({ name: 'getTabNameForField', params: 0 });
-  methods.push({ name: 'getTitle', params: 0 });
-  methods.push({ name: 'getUniqueValue', params: 0 });
-  methods.push({ name: 'getValue', params: 1 });
-  methods.push({ name: 'getViewName', params: 0 });
-  methods.push({ name: 'hasAttribute', params: 0 });
-  methods.push({ name: 'hasField', params: 1 });
-  methods.push({ name: 'hasFieldMsgs', params: 1 });
-  methods.push({ name: 'hideAllFieldMsgs', params: 2 });
-  methods.push({ name: 'hideErrorBox', params: 1 });
-  methods.push({ name: 'hideFieldMsg', params: 2 });
-  methods.push({ name: 'hideRelatedList', params: 1 });
-  methods.push({ name: 'hideRelatedLists', params: 0 });
-  methods.push({ name: 'isDatabaseView', params: 0 });
-  methods.push({ name: 'isDisabled', params: 1 });
-  methods.push({ name: 'isDisplayNone', params: 1 });
-  methods.push({ name: 'isEditableField', params: 1 });
-  methods.push({ name: 'isInteger', params: 1 });
-  methods.push({ name: 'isLiveUpdating', params: 0 });
-  methods.push({ name: 'isMandatory', params: 0 });
-  methods.push({ name: 'isNewRecord', params: 0 });
-  methods.push({ name: 'isNumeric', params: 1 });
-  methods.push({ name: 'isReadOnly', params: 1 });
-  methods.push({ name: 'isSectionVisible', params: 1 });
-  methods.push({ name: 'isTemplateCompatible', params: 0 });
-  methods.push({ name: 'isUserPersonalizedField', params: 0 });
-  methods.push({ name: 'isVisible', params: 1 });
-  methods.push({ name: 'mandatoryCheck', params: 0 });
-  methods.push({ name: 'onSubmit', params: 0 });
-  methods.push({ name: 'registerHandler', params: 2 });
-  methods.push({ name: 'registerPrefixHandler', params: 0 });
-  methods.push({ name: 'removeAllDecorations', params: 0 });
-  methods.push({ name: 'removeContextItem', params: 0 });
-  methods.push({ name: 'removeCurrentPrefix', params: 0 });
-  methods.push({ name: 'refreshSlushbucket', params: 0 });
-  methods.push({ name: 'removeDecoration', params: 3 });
-  methods.push({ name: 'removeItem', params: 0 });
-  methods.push({ name: 'removeOption', params: 2 });
-  methods.push({ name: 'resetPersonalizeHiddenFields', params: 0 });
-  methods.push({ name: 'resolveLabelNameMap', params: 0 });
-  methods.push({ name: 'resolveNameMap', params: 0 });
-  methods.push({ name: 'resolvePrettyNameMap', params: 0 });
-  methods.push({ name: 'save', params: 0 });
-  methods.push({ name: 'serialize', params: 0 });
-  methods.push({ name: 'serializeChanged', params: 0 });
-  methods.push({ name: 'serializeChangedAll', params: 0 });
-  methods.push({ name: 'serializeTargetFields', params: 0 });
-  methods.push({ name: 'setAction', params: 0 });
-  methods.push({ name: 'setDisabled', params: 2 });
-  methods.push({ name: 'setDisabledControl', params: 1 });
-  methods.push({ name: 'setDisplay', params: 1 });
-  methods.push({ name: 'setFieldPlaceholder', params: 2 });
-  methods.push({ name: 'setLabel', params: 2 });
-  methods.push({ name: 'setLabelOf', params: 2 });
-  methods.push({ name: 'setLiveUpdating', params: 0 });
-  methods.push({ name: 'setMandatory', params: 2 });
-  methods.push({ name: 'setMandatoryOnlyIfModified', params: 0 });
-  methods.push({ name: 'setReadOnly', params: 2 });
-  methods.push({ name: 'setReadonly', params: 2 });
-  methods.push({ name: 'setRequiredChecked', params: 0 });
-  methods.push({ name: 'setScope', params: 0 });
-  methods.push({ name: 'setSectionDisplay', params: 0 });
-  methods.push({ name: 'setSensitiveDisplayValue', params: 0 });
-  methods.push({ name: 'setStreamJournalFieldsDisplay', params: 0 });
-  methods.push({ name: 'setTemplateValue', params: 0 });
-  methods.push({ name: 'setUserDisplay', params: 0 });
-  methods.push({ name: 'setValidation', params: 0 });
-  methods.push({ name: 'setValue', params: 2 });
-  methods.push({ name: 'setVariablesReadOnly', params: 1 });
-  methods.push({ name: 'setVisible', params: 2 });
-  methods.push({ name: 'showErrorBox', params: 2 });
-  methods.push({ name: 'showFieldMsg', params: 3 });
-  methods.push({ name: 'showRelatedList', params: 1 });
-  methods.push({ name: 'showRelatedLists', params: 0 });
-  methods.push({ name: 'submit', params: 0 });
-  methods.push({ name: 'validate', params: 0 });
+  methods.push({ name: 'activateTab', params: ['tabname'] });
+  methods.push({ name: 'addAttribute', params: ['attribute'] });
+  methods.push({ name: 'addDecoration', params: ['field', 'icon-star', 'VIP'] });
+  methods.push({ name: 'addErrorMessage', params: ['Error Message Goes Here'] });
+  methods.push({ name: 'addGlideUIElement', params: [] });
+  methods.push({ name: 'addInfoMessage', params: ['Info Message Goes Here'] });
+  methods.push({ name: 'addNameMapEntry', params: [] });
+  methods.push({ name: 'addOption', params: ['field', '10', '10 - Display Value of ten', 0] });
+  methods.push({ name: 'addSecurityReadOnlyFields', params: [] });
+  methods.push({ name: 'addValidator', params: ['fieldType', 'validator'] });
+  methods.push({ name: 'addWarningMessage', params: ['Warning Message Goes Here'] });
+  methods.push({ name: 'allChangedFieldsFilter', params: [] });
+  methods.push({ name: 'changedFieldsFilter', params: [] });
+  methods.push({ name: 'changeElementParent', params: [] });
+  methods.push({ name: 'changeElementStyle', params: [] });
+  methods.push({ name: 'clearMessages', params: [] });
+  methods.push({ name: 'clearOptions', params: ['field'] });
+  methods.push({ name: 'clearValue', params: ['field'] });
+  methods.push({ name: 'disable', params: [] });
+  methods.push({ name: 'disableAttachments', params: [] });
+  methods.push({ name: 'enable', params: [] });
+  methods.push({ name: 'enableAttachments', params: [] });
+  methods.push({ name: 'enableOption', params: ['control', 'choiceValue', 'choiceLabel'] });
+  methods.push({ name: 'enableUIPolicyFields', params: [] });
+  methods.push({ name: 'fieldChanged', params: ['elementName', 'changeFlag'] });
+  methods.push({ name: 'findV2RelatedListName', params: ['listTableName'] });
+  methods.push({ name: 'flash', params: ['field', '#FFFACD', 0] }); // field, color, duration of flash, 2 = 1 sec, 0 = 2 sec, -2 = 3 second, -4 = 4 second
+  methods.push({ name: 'getAction', params: [] });
+  methods.push({ name: 'getActionName', params: [] });
+  methods.push({ name: 'getBooleanValue', params: ['field'] });
+  methods.push({ name: 'getControl', params: ['field'] });
+  methods.push({ name: 'getControlByForm', params: [] });
+  methods.push({ name: 'getDecimalValue', params: ['field'] });
+  methods.push({ name: 'getDerivedFields', params: ['field'] });
+  methods.push({ name: 'getDisplayBox', params: ['field'] });
+  methods.push({ name: 'getDisplayValue', params: ['field'] });
+  methods.push({ name: 'getEditableFields', params: [] });
+  methods.push({ name: 'getElement', params: ['field'] });
+  methods.push({ name: 'getEncodedRecord', params: [] });
+  methods.push({ name: 'getFieldNames', params: [] });
+  methods.push({ name: 'getFormElement', params: [] });
+  methods.push({ name: 'getGlideUIElement', params: ['field'] });
+  methods.push({ name: 'getHelpTextControl', params: ['field'] });
+  methods.push({ name: 'getIntValue', params: ['field'] });
+  methods.push({ name: 'getLabel', params: ['field'] });
+  methods.push({ name: 'getLabelOf', params: ['field'] });
+  methods.push({ name: 'getMissingFields', params: [] });
+  methods.push({ name: 'getNiBox', params: ['field'] });
+  methods.push({ name: 'getOption', params: ['field', 'value'] });
+  methods.push({ name: 'getOptionControl', params: ['field'] });
+  methods.push({ name: 'getParameter', params: ['id'] });
+  methods.push({ name: 'getPrefixHandler', params: ['elementId'] });
+  methods.push({ name: 'getReference', params: ['field'] });
+  methods.push({ name: 'getRelatedListNames', params: [] });
+  methods.push({ name: 'getScope', params: [] });
+  methods.push({ name: 'getSectionNames', params: [] });
+  methods.push({ name: 'getSections', params: [] });
+  methods.push({ name: 'getSysId', params: [] });
+  methods.push({ name: 'getTableName', params: [] });
+  methods.push({ name: 'getTabNameForField', params: ['field'] });
+  methods.push({ name: 'getTitle', params: [] });
+  methods.push({ name: 'getUniqueValue', params: [] });
+  methods.push({ name: 'getValue', params: ['field'] });
+  methods.push({ name: 'getViewName', params: [] });
+  methods.push({ name: 'hasAttribute', params: ['attribute'] });
+  methods.push({ name: 'hasField', params: ['field'] });
+  methods.push({ name: 'hasFieldMsgs', params: ['field'] });
+  methods.push({ name: 'hideAllFieldMsgs', params: ['type'] });// info, warn, error
+  methods.push({ name: 'hideErrorBox', params: ['field'] });
+  methods.push({ name: 'hideFieldMsg', params: ['field', false] });// field, bool if true, all, else last
+  methods.push({ name: 'hideRelatedList', params: ['listname'] });
+  methods.push({ name: 'hideRelatedLists', params: [] });
+  methods.push({ name: 'isDatabaseView', params: [] });
+  methods.push({ name: 'isDisabled', params: ['field'] });
+  methods.push({ name: 'isDisplayNone', params: ['field'] });
+  methods.push({ name: 'isEditableField', params: ['field'] });
+  methods.push({ name: 'isInteger', params: ['field'] });
+  methods.push({ name: 'isLiveUpdating', params: [] });
+  methods.push({ name: 'isMandatory', params: ['field'] });
+  methods.push({ name: 'isNewRecord', params: [] });
+  methods.push({ name: 'isNumeric', params: ['decimal'] });// decimal, float, integer, numeric
+  methods.push({ name: 'isReadOnly', params: ['', 'control'] });
+  methods.push({ name: 'isSectionVisible', params: ['tabname'] });
+  methods.push({ name: 'isTemplateCompatible', params: ['', 'control'] });
+  methods.push({ name: 'isUserPersonalizedField', params: ['field'] });
+  methods.push({ name: 'isVisible', params: ['', 'control'] });
+  methods.push({ name: 'mandatoryCheck', params: [] });
+  methods.push({ name: 'onSubmit', params: [] });
+  methods.push({ name: 'registerHandler', params: ['id', 'handler'] });
+  methods.push({ name: 'registerPrefixHandler', params: ['prefix', 'handlerObject'] });
+  methods.push({ name: 'removeAllDecorations', params: [] });
+  methods.push({ name: 'removeContextItem', params: [] });
+  methods.push({ name: 'removeCurrentPrefix', params: ['id'] });
+  methods.push({ name: 'refreshSlushbucket', params: [] });
+  methods.push({ name: 'removeDecoration', params: ['field', 'icon-star', 'VIP'] });
+  methods.push({ name: 'removeItem', params: ['menu', 'itemID'] });
+  methods.push({ name: 'removeOption', params: ['field', 'value'] });
+  methods.push({ name: 'resetPersonalizeHiddenFields', params: [] });
+  methods.push({ name: 'resolveLabelNameMap', params: ['name'] });
+  methods.push({ name: 'resolveNameMap', params: ['prettyName'] });
+  methods.push({ name: 'resolvePrettyNameMap', params: ['realName'] });
+  methods.push({ name: 'save', params: [] });
+  methods.push({ name: 'serialize', params: ['filterFunc'] });
+  methods.push({ name: 'serializeChanged', params: [] });
+  methods.push({ name: 'serializeChangedAll', params: [] });
+  methods.push({ name: 'serializeTargetFields', params: [] });
+  methods.push({ name: 'setAction', params: ['action'] });
+  methods.push({ name: 'setDisabled', params: ['field', 'bool'] });
+  methods.push({ name: 'setDisabledControl', params: ['control', 'bool'] });
+  methods.push({ name: 'setDisplay', params: ['field', 'bool'] });
+  methods.push({ name: 'setFieldPlaceholder', params: ['field', 'This is some placeholder text.'] });
+  methods.push({ name: 'setLabel', params: ['field', 'label'] });
+  methods.push({ name: 'setLabelOf', params: ['field', 'label'] });
+  methods.push({ name: 'setLiveUpdating', params: ['bool'] });
+  methods.push({ name: 'setMandatory', params: ['field', 'bool'] });
+  methods.push({ name: 'setMandatoryOnlyIfModified', params: [] });
+  methods.push({ name: 'setReadOnly', params: ['field', 'bool'] });
+  methods.push({ name: 'setReadonly', params: ['field', 'bool'] });
+  methods.push({ name: 'setRequiredChecked', params: ['field', 'bool'] });
+  methods.push({ name: 'setScope', params: ['scope'] });
+  methods.push({ name: 'setSectionDisplay', params: ['name', 'bool'] });
+  methods.push({ name: 'setSensitiveDisplayValue', params: ['s', 'displayValue'] });
+  methods.push({ name: 'setStreamJournalFieldsDisplay', params: ['number'] });
+  methods.push({ name: 'setTemplateValue', params: ['field', 'value', 'displayValue'] });
+  methods.push({ name: 'setUserDisplay', params: ['field', 'bool'] });
+  methods.push({ name: 'setValidation', params: ['field', 'bool'] });
+  methods.push({ name: 'setValue', params: ['field', 'value'] });
+  methods.push({ name: 'setVariablesReadOnly', params: ['bool'] });
+  methods.push({ name: 'setVisible', params: ['field', 'bool'] });
+  methods.push({ name: 'showErrorBox', params: ['field', 'message', 'scrollForm(bool)'] });
+  methods.push({ name: 'showFieldMsg', params: ['field', 'message', 'type', 'scrollForm(bool)', 'key'] });
+  methods.push({ name: 'showRelatedList', params: ['tableName'] });
+  methods.push({ name: 'showRelatedLists', params: [] });
+  methods.push({ name: 'submit', params: [] });
+  methods.push({ name: 'validate', params: [] });
   methods.map(function (method) {
-    g_form.addOption('method', method.name, method.name);
+    g_form.addOption('method', method.name + ':' + method.params.join(':'), method.name);
   });
-  g_form.setReadOnly('function','true');
+  g_form.setReadOnly('function', 'true');
 }
 ]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
@@ -166,7 +166,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>2bfd9d400f635300fc69cdbce1050e19</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Define Methods</sys_name>
         <sys_overrides/>
         <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
@@ -174,7 +174,7 @@
         <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
         <sys_update_name>catalog_script_client_2bfd9d400f635300fc69cdbce1050e19</sys_update_name>
         <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
-        <sys_updated_on>2018-07-22 06:21:12</sys_updated_on>
+        <sys_updated_on>2018-07-23 13:04:18</sys_updated_on>
         <table/>
         <type>onLoad</type>
         <ui_type>10</ui_type>

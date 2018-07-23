@@ -52,7 +52,7 @@
         <reference_qual_condition/>
         <scale_max>5</scale_max>
         <scale_min>0</scale_min>
-        <show_help>false</show_help>
+        <show_help>true</show_help>
         <show_help_on_load>false</show_help_on_load>
         <sp_widget/>
         <summary_macro/>
@@ -60,14 +60,14 @@
         <sys_created_by>jace.benson@protonmail.com</sys_created_by>
         <sys_created_on>2018-07-22 02:58:45</sys_created_on>
         <sys_id>764305800f235300fc69cdbce1050ec6</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Label</sys_name>
         <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
         <sys_policy/>
         <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
         <sys_update_name>item_option_new_764305800f235300fc69cdbce1050ec6</sys_update_name>
         <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
-        <sys_updated_on>2018-07-22 06:44:35</sys_updated_on>
+        <sys_updated_on>2018-07-23 02:12:03</sys_updated_on>
         <table/>
         <tooltip>Tooltip</tooltip>
         <type>11</type>
