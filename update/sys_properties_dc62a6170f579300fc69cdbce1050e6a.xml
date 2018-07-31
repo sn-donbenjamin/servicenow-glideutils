@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_properties">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
     <sys_properties action="INSERT_OR_UPDATE">
         <choices>true,false</choices>
         <description>This controls weather or not the `x_8821_glide_utils.replace` script include, and `Replace Text` UI action is available.  If true, they are enabled, if false, they are disabled.</description>

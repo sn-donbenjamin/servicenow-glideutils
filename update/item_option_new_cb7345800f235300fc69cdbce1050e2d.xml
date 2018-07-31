@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="item_option_new">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new">
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
         <attributes/>
@@ -54,20 +53,20 @@
         <scale_min>0</scale_min>
         <show_help>false</show_help>
         <show_help_on_load>false</show_help_on_load>
-        <sp_widget/>
+        <sp_widget display_value="SetVariablesByURL">ab25bac30feb1300fc69cdbce1050e25</sp_widget>
         <summary_macro/>
         <sys_class_name>item_option_new</sys_class_name>
         <sys_created_by>jace.benson@protonmail.com</sys_created_by>
         <sys_created_on>2018-07-22 02:59:36</sys_created_on>
         <sys_id>cb7345800f235300fc69cdbce1050e2d</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Macro</sys_name>
         <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
         <sys_policy/>
         <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
         <sys_update_name>item_option_new_cb7345800f235300fc69cdbce1050e2d</sys_update_name>
         <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
-        <sys_updated_on>2018-07-22 06:45:29</sys_updated_on>
+        <sys_updated_on>2018-07-31 19:02:52</sys_updated_on>
         <table/>
         <tooltip>Tooltip</tooltip>
         <type>14</type>

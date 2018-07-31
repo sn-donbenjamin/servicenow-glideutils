@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update sys_domain="global" table="sys_ui_context_menu">
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_context_menu">
     <sys_ui_context_menu action="INSERT_OR_UPDATE">
         <action_script><![CDATA[/**
  * Script executed on the Client for this menu action

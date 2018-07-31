@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_properties">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
     <sys_properties action="INSERT_OR_UPDATE">
         <choices>true,false</choices>
         <description>This controls weather or not the Show JSON context item is available (globally) and the Show JSON UI Action is on Task.  If true, it's enabled, if false, it's disabled.</description>
