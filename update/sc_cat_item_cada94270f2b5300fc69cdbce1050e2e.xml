@@ -6,13 +6,13 @@
         <category/>
         <cost>0</cost>
         <custom_cart/>
-        <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
+        <delivery_plan/>
         <delivery_plan_script/>
         <delivery_time>1970-01-03 00:00:00</delivery_time>
         <description><![CDATA[<p>This is a test item to test all field types and client side methods</p>
 <p>This is only available for users with &#39;admin&#39; role.</p>
-<p>To load this up in Service Portal, ctrl &#43; <a title="click here" href="https://dev32369.service-now.com/sp?id&#61;sc_cat_item&amp;sys_id&#61;cada94270f2b5300fc69cdbce1050e2e" rel="nofollow">click here</a>.</p>
-<p>To load this up in the normal GUI, ctrl &#43; <a title="click here" href="https://dev32369.service-now.com/com.glideapp.servicecatalog_cat_item_view.do?v&#61;1&amp;sysparm_id&#61;cada94270f2b5300fc69cdbce1050e2e" rel="nofollow">click here</a>.</p>]]></description>
+<p>To load this up in Service Portal, ctrl &#43; <a title="click here" href="/sp?id&#61;sc_cat_item&amp;sys_id&#61;cada94270f2b5300fc69cdbce1050e2e" rel="nofollow">click here</a>.</p>
+<p>To load this up in the normal GUI, ctrl &#43; <a title="click here" href="/com.glideapp.servicecatalog_cat_item_view.do?v&#61;1&amp;sysparm_id&#61;cada94270f2b5300fc69cdbce1050e2e" rel="nofollow">click here</a>.</p>]]></description>
         <entitlement_script/>
         <group/>
         <hide_sp>false</hide_sp>
@@ -26,7 +26,7 @@
         <mobile_picture/>
         <mobile_picture_type>use_desktop_picture</mobile_picture_type>
         <model/>
-        <name>Make Item in Dev</name>
+        <name>Create Item</name>
         <no_cart>false</no_cart>
         <no_order>false</no_order>
         <no_order_now>false</no_order_now>
@@ -52,14 +52,14 @@
         <sys_created_by>jace.benson@protonmail.com</sys_created_by>
         <sys_created_on>2018-08-01 21:01:11</sys_created_on>
         <sys_id>cada94270f2b5300fc69cdbce1050e2e</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Make Item in Dev</sys_name>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Create Item</sys_name>
         <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
         <sys_policy/>
         <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
         <sys_update_name>sc_cat_item_cada94270f2b5300fc69cdbce1050e2e</sys_update_name>
         <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
-        <sys_updated_on>2018-08-01 21:09:42</sys_updated_on>
+        <sys_updated_on>2018-08-03 14:45:30</sys_updated_on>
         <template/>
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
@@ -67,7 +67,7 @@
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
         <visible_standalone>true</visible_standalone>
-        <workflow/>
+        <workflow display_value="Create Item Workflow">82a311c40f371300fc69cdbce1050e9e</workflow>
     </sc_cat_item>
     <sys_translated_text action="delete_multiple" query="documentkey=cada94270f2b5300fc69cdbce1050e2e"/>
     <fx_price action="delete_multiple" query="id=cada94270f2b5300fc69cdbce1050e2e"/>

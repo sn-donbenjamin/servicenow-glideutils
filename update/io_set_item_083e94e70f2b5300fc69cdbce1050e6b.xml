@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
     <io_set_item action="INSERT_OR_UPDATE">
         <order>1000</order>
-        <sc_cat_item display_value="Make Item in Dev">cada94270f2b5300fc69cdbce1050e2e</sc_cat_item>
+        <sc_cat_item display_value="Create Item">cada94270f2b5300fc69cdbce1050e2e</sc_cat_item>
         <sys_class_name>io_set_item</sys_class_name>
         <sys_created_by>jace.benson@protonmail.com</sys_created_by>
         <sys_created_on>2018-08-01 21:16:23</sys_created_on>

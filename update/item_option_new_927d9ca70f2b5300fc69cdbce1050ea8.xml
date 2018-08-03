@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new">
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
-        <attributes/>
-        <cat_item display_value="Make Item in Dev">cada94270f2b5300fc69cdbce1050e2e</cat_item>
+        <attributes>ref_qual_elements=catalog</attributes>
+        <cat_item display_value="Create Item">cada94270f2b5300fc69cdbce1050e2e</cat_item>
         <category/>
         <choice_direction>down</choice_direction>
         <choice_field/>
@@ -21,16 +21,16 @@
         <field/>
         <global>false</global>
         <help_tag>More information</help_tag>
-        <help_text/>
-        <include_none>false</include_none>
+        <help_text>These are the categories in the current instance.  If you need a category created, that will have to be requested seperately.</help_text>
+        <include_none>true</include_none>
         <instructions/>
         <layout>normal</layout>
         <list_table/>
-        <lookup_label/>
+        <lookup_label>title</lookup_label>
         <lookup_price/>
-        <lookup_table/>
+        <lookup_table>sc_category</lookup_table>
         <lookup_unique>false</lookup_unique>
-        <lookup_value/>
+        <lookup_value>sys_id</lookup_value>
         <macro/>
         <mandatory>false</mandatory>
         <map_to_field>false</map_to_field>
@@ -47,32 +47,32 @@
         <record/>
         <record_producer_table/>
         <reference/>
-        <reference_qual/>
+        <reference_qual>javascript: 'sc_catalog=' + current.variables.catalog;</reference_qual>
         <reference_qual_condition/>
         <scale_max>5</scale_max>
         <scale_min>0</scale_min>
-        <show_help>false</show_help>
-        <show_help_on_load>false</show_help_on_load>
+        <show_help>true</show_help>
+        <show_help_on_load>true</show_help_on_load>
         <sp_widget/>
         <summary_macro/>
         <sys_class_name>item_option_new</sys_class_name>
         <sys_created_by>jace.benson@protonmail.com</sys_created_by>
         <sys_created_on>2018-08-01 21:12:45</sys_created_on>
         <sys_id>927d9ca70f2b5300fc69cdbce1050ea8</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Category</sys_name>
         <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
         <sys_policy/>
         <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
         <sys_update_name>item_option_new_927d9ca70f2b5300fc69cdbce1050ea8</sys_update_name>
         <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
-        <sys_updated_on>2018-08-01 22:14:17</sys_updated_on>
+        <sys_updated_on>2018-08-03 13:40:42</sys_updated_on>
         <table/>
         <tooltip/>
-        <type>5</type>
+        <type>18</type>
         <ui_page/>
         <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
+        <use_reference_qualifier>advanced</use_reference_qualifier>
         <variable_name/>
         <variable_set/>
         <variable_width/>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Standard Workflow" max_length="40" name="x_8821_glide_utils_std_wf" type="collection">
+        <element label="Approval 1 Group" max_length="32" name="approval_1_group" reference="sys_user_group" type="reference"/>
+        <element label="Approval 2 Group" max_length="32" name="approval_2_group" reference="sys_user_group" type="reference"/>
+        <element display="true" label="Item" max_length="32" name="item" reference="sc_cat_item" reference_qual="workflow=4b4d55cc0f371300fc69cdbce1050e47^EQ" reference_qual_condition="workflow=4b4d55cc0f371300fc69cdbce1050e47^EQ" type="reference"/>
+        <element label="Task 1 Description" max_length="1000" name="task_1_description" type="string"/>
+        <element label="Task 1 Group" max_length="32" name="task_1_group" reference="sys_user_group" type="reference"/>
+        <element label="Task 1 Short Description" max_length="100" name="task_1_short_description" type="string"/>
+        <element label="Task 2 Description" max_length="1000" name="task_2_description" type="string"/>
+        <element label="Task 2 Group" max_length="32" name="task_2_group" reference="sys_user_group" type="reference"/>
+        <element label="Task 2 Short Description" max_length="100" name="task_2_short_description" type="string"/>
+        <element label="Workflow" max_length="32" name="workflow" reference="wf_workflow" reference_qual="sys_scope=e46761ba0f521300fc69cdbce1050e46^sys_id!=4b4d55cc0f371300fc69cdbce1050e47^sys_id!=82a311c40f371300fc69cdbce1050e9e^EQ" reference_qual_condition="sys_scope=e46761ba0f521300fc69cdbce1050e46^sys_id!=4b4d55cc0f371300fc69cdbce1050e47^sys_id!=82a311c40f371300fc69cdbce1050e9e^EQ" type="reference"/>
+        <index name="index">
+            <element name="item"/>
+        </index>
+        <index name="index2">
+            <element name="approval_1_group"/>
+        </index>
+        <index name="index3">
+            <element name="workflow"/>
+        </index>
+        <index name="index4">
+            <element name="task_1_group"/>
+        </index>
+        <index name="index5">
+            <element name="approval_2_group"/>
+        </index>
+        <index name="index6">
+            <element name="task_2_group"/>
+        </index>
+    </element>
+</database>

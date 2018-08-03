@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
     <catalog_ui_policy_action action="INSERT_OR_UPDATE">
-        <catalog_item display_value="Make Item in Dev">cada94270f2b5300fc69cdbce1050e2e</catalog_item>
+        <catalog_item display_value="Create Item">cada94270f2b5300fc69cdbce1050e2e</catalog_item>
         <catalog_variable>IO:82d79fbf0f2b9300fc69cdbce1050ebd</catalog_variable>
         <cleared>false</cleared>
         <disabled>ignore</disabled>

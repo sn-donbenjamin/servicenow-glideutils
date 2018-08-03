@@ -1,0 +1,1666 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_workflow_version">
+    <wf_workflow_version action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <activity_stages>{"ends":["cea399480f371300fc69cdbce1050ea6"],"subflows":[],"activities":{"805415880f371300fc69cdbce1050ef5":"46a399480f371300fc69cdbce1050ea9","ccd659c80f371300fc69cdbce1050ecb":"4aa399480f371300fc69cdbce1050ea8","4e77910c0f371300fc69cdbce1050eaf":"42a399480f371300fc69cdbce1050ea9"},"stages":{"46a399480f371300fc69cdbce1050ea9":{"duration":"1 Day","order":100,"stageId":"46a399480f371300fc69cdbce1050ea9","name":"Waiting for Approval","value":"waiting_for_approval"},"42a399480f371300fc69cdbce1050ea9":{"duration":"","order":1100,"stageId":"42a399480f371300fc69cdbce1050ea9","name":"Completed","value":"complete"},"4aa399480f371300fc69cdbce1050ea8":{"duration":"","order":1000,"stageId":"4aa399480f371300fc69cdbce1050ea8","name":"Request Cancelled","value":"Request Cancelled"}}}</activity_stages>
+        <after_business_rules>false</after_business_rules>
+        <checked_out/>
+        <checked_out_by/>
+        <column_renderer display_value="Workflow-driven">a56213111b030100adca1e094f0713ac</column_renderer>
+        <condition/>
+        <condition_type/>
+        <description/>
+        <expected_sequences>02a311c40f371300fc69cdbce1050e9f,805415880f371300fc69cdbce1050ef5,ffa7150c0f371300fc69cdbce1050e17,0825d5880f371300fc69cdbce1050e3f,4e77910c0f371300fc69cdbce1050eaf,cea399480f371300fc69cdbce1050ea6</expected_sequences>
+        <expected_time>1970-01-01 14:00:00</expected_time>
+        <expected_time_type/>
+        <full_sequences>02a311c40f371300fc69cdbce1050e9f,805415880f371300fc69cdbce1050ef5,ffa7150c0f371300fc69cdbce1050e17,ccd659c80f371300fc69cdbce1050ecb,0825d5880f371300fc69cdbce1050e3f,cea399480f371300fc69cdbce1050ea6,4e77910c0f371300fc69cdbce1050eaf</full_sequences>
+        <journal/>
+        <max_activity_count>100</max_activity_count>
+        <name>Create Item Workflow</name>
+        <not_cacheable>false</not_cacheable>
+        <on_cancel><![CDATA[// This script executes if the workflow is cancelled.// The global variable context_sys_id contains the sys_id of the cancelled workflow context.]]></on_cancel>
+        <order>100</order>
+        <pin_type>set_by_activity</pin_type>
+        <published>true</published>
+        <relative_duration/>
+        <requires_ert>true</requires_ert>
+        <run_multiple>false</run_multiple>
+        <schedule/>
+        <stage_field>stage</stage_field>
+        <stage_order>computed</stage_order>
+        <start display_value="Begin">02a311c40f371300fc69cdbce1050e9f</start>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:25:57</sys_created_on>
+        <sys_id>6f7359480f371300fc69cdbce1050e34</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:44:49</sys_updated_on>
+        <table>sc_req_item</table>
+        <timezone/>
+        <validated>false</validated>
+        <workflow display_value="Create Item Workflow">82a311c40f371300fc69cdbce1050e9e</workflow>
+    </wf_workflow_version>
+    <wf_workflow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <description/>
+        <name>Create Item Workflow</name>
+        <preview/>
+        <sys_class_name>wf_workflow</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:25:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>82a311c40f371300fc69cdbce1050e9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create Item Workflow</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
+        <sys_update_name>wf_workflow_82a311c40f371300fc69cdbce1050e9e</sys_update_name>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:25:57</sys_updated_on>
+        <table>sc_req_item</table>
+        <template>false</template>
+        <vars/>
+    </wf_workflow>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Completed</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>1100</order>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:25:57</sys_created_on>
+        <sys_id>42a399480f371300fc69cdbce1050ea9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:25:57</sys_updated_on>
+        <value>complete</value>
+        <workflow_version display_value="Create Item Workflow">6f7359480f371300fc69cdbce1050e34</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Delivery</name>
+        <ola>1970-01-03 00:00:00</ola>
+        <order>140</order>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:25:57</sys_created_on>
+        <sys_id>4aa399480f371300fc69cdbce1050ea9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:25:57</sys_updated_on>
+        <value>delivery</value>
+        <workflow_version display_value="Create Item Workflow">6f7359480f371300fc69cdbce1050e34</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Fulfillment</name>
+        <ola>1970-01-02 00:00:00</ola>
+        <order>120</order>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:25:57</sys_created_on>
+        <sys_id>c6a399480f371300fc69cdbce1050ea9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:25:57</sys_updated_on>
+        <value>fulfillment</value>
+        <workflow_version display_value="Create Item Workflow">6f7359480f371300fc69cdbce1050e34</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Request Cancelled</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>1000</order>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:25:57</sys_created_on>
+        <sys_id>4aa399480f371300fc69cdbce1050ea8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:25:57</sys_updated_on>
+        <value>Request Cancelled</value>
+        <workflow_version display_value="Create Item Workflow">6f7359480f371300fc69cdbce1050e34</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Request Approved</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>90</order>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:25:57</sys_created_on>
+        <sys_id>c2a399480f371300fc69cdbce1050ea9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:25:57</sys_updated_on>
+        <value>request_approved</value>
+        <workflow_version display_value="Create Item Workflow">6f7359480f371300fc69cdbce1050e34</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Waiting for Approval</name>
+        <ola>1970-01-02 00:00:00</ola>
+        <order>100</order>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:25:57</sys_created_on>
+        <sys_id>46a399480f371300fc69cdbce1050ea9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:25:57</sys_updated_on>
+        <value>waiting_for_approval</value>
+        <workflow_version display_value="Create Item Workflow">6f7359480f371300fc69cdbce1050e34</workflow_version>
+    </wf_stage>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Begin">c7a5e32c0a0a0b3a002377c24ed8ea76</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>1</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>Begin</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:25:57</sys_created_on>
+        <sys_id>02a311c40f371300fc69cdbce1050e9f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:25:57</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Create Item Workflow">6f7359480f371300fc69cdbce1050e34</workflow_version>
+        <x>20</x>
+        <y>20</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=02a311c40f371300fc69cdbce1050e9f"/>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Begin">02a311c40f371300fc69cdbce1050e9f</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:25:57</sys_created_on>
+        <sys_id>46a399480f371300fc69cdbce1050ea6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:25:57</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>4</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Create Item, Variables, UI Policy, UI Policy Actions, Update Set, and move all updates to update set</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:34:48</sys_created_on>
+        <sys_id>0825d5880f371300fc69cdbce1050e3f</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:44:18</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Create Item Workflow">6f7359480f371300fc69cdbce1050e34</workflow_version>
+        <x>396</x>
+        <y>27</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=0825d5880f371300fc69cdbce1050e3f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>0825d5880f371300fc69cdbce1050e3f</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:34:48</sys_created_on>
+        <sys_id>ffa591c80f371300fc69cdbce1050e5c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:34:48</sys_updated_on>
+        <value>var mi = new x_8821_glide_utils.makeItem();&#13;
+mi.execute(current);</value>
+        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>0825d5880f371300fc69cdbce1050e3f</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:34:48</sys_created_on>
+        <sys_id>ffa591c80f371300fc69cdbce1050e5c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:34:48</sys_updated_on>
+        <value>var mi = new x_8821_glide_utils.makeItem();&#13;
+mi.execute(current);</value>
+        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Create Item, Variables, UI Policy, UI Policy Actions, Update Set, and move all updates to update set">0825d5880f371300fc69cdbce1050e3f</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:34:48</sys_created_on>
+        <sys_id>7ba591c80f371300fc69cdbce1050e5d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:34:48</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="End">c7a66f7d0a0a0b3a004544a6d2f14076</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>2</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>End</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:25:57</sys_created_on>
+        <sys_id>cea399480f371300fc69cdbce1050ea6</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:32:10</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Create Item Workflow">6f7359480f371300fc69cdbce1050e34</workflow_version>
+        <x>937</x>
+        <y>345</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=cea399480f371300fc69cdbce1050ea6"/>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Approval - Group">354e911f0a0a029a00e6a0e6ad74206f</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>3</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Preapproval (set by property)</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage display_value="Waiting for Approval">46a399480f371300fc69cdbce1050ea9</stage>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>805415880f371300fc69cdbce1050ef5</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:44:43</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Create Item Workflow">6f7359480f371300fc69cdbce1050e34</workflow_version>
+        <x>10</x>
+        <y>233</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=805415880f371300fc69cdbce1050ef5"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>1150</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>027495880f371300fc69cdbce1050e91</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value/>
+        <variable display_value="">a8a63d44c0a8006617a1a568e6ee0d9e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>350</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>067495880f371300fc69cdbce1050e90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value>reject</value>
+        <variable display_value="">4fc0fabe0a6a803f7f0af58179445dbb</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>110</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>0a7495880f371300fc69cdbce1050e8e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value/>
+        <variable display_value="">a8a89323c0a80066046c6c1fd0df6475</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>1200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>0a7495880f371300fc69cdbce1050e8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value/>
+        <variable display_value="">a8ad144ec0a8006638755cb3662df229</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>2050</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>0e7495880f371300fc69cdbce1050e91</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:31:30</sys_updated_on>
+        <value>var preapprovalGroup = gs.getProperty('x_8821_glide_utils.item.development.preapproval');&#13;
+var answer = [];&#13;
+answer.push(preapprovalGroup);&#13;
+</value>
+        <variable display_value="">069c53740a0a0b260e35ee0ead2dbbcc</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>1360</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>427495880f371300fc69cdbce1050e90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value>// Set 'answer' to the number of seconds this timer should wait&#13;
+answer = 0;</value>
+        <variable display_value="">a8a16056c0a800660449c1bbc94d797f</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>1370</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>467495880f371300fc69cdbce1050e8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value>// Set the variable 'answer' to '', 'approved' or 'rejected' to indicate the overall approval status for this approval.&#13;
+//&#13;
+// This script is responsible for setting the approval state for each group that is part of this approval activity before&#13;
+// returning the overall approval state for all of the group(s).&#13;
+//&#13;
+// When called, the following variables are available to the script:&#13;
+//&#13;
+//    Overall for all of the groups that are part of this approval activity:&#13;
+//        counts.total = total number of groups that are part of this approval&#13;
+//        counts.approved = # of groups that approved so far&#13;
+//        counts.rejected = # of groups that rejected so far&#13;
+//        counts.requested = # of groups that are pending approval&#13;
+//        counts.not_requested = # of groups that are not pending approval&#13;
+//        counts.not_required = # of groups that approval is not required&#13;
+//&#13;
+//    And for each group:&#13;
+//        groups[group_id].total = total number of users that are part of this group's approval&#13;
+//        groups[group_id].approved = # of users that approved so far&#13;
+//        groups[group_id].rejected = # of users that rejected so far&#13;
+//        groups[group_id].requested = # of users that are pending approval&#13;
+//        groups[group_id].not_requested = # of users that are not pending approval&#13;
+//        groups[group_id].not_required = # of users that approval is not required&#13;
+//&#13;
+//        groups[group_id].approvalIDs[state] = array of user ids that are at the specified approval state&#13;
+//&#13;
+//        Note: Iterate the groups using:&#13;
+//            for (var id in groups) {&#13;
+//                 var group = groups[id];&#13;
+//                 ...  group.total ...&#13;
+//            }&#13;
+</value>
+        <variable display_value="">069e81530a0a0b264289c1e23fe52558</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>4a7495880f371300fc69cdbce1050e91</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value>any_each</value>
+        <variable display_value="">0698d53c0a0a0b2627f7cf654de211b6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>1200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>4e7495880f371300fc69cdbce1050e90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value>3bf802c20a0a0b52008e2859cd8abcf2</value>
+        <variable display_value="">a8a7bc7dc0a800666777a9bd9b84fef8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>2000</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>827495880f371300fc69cdbce1050e8f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:31:30</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">069bd78c0a0a0b267fa35f3d77e02a10</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>1200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>827495880f371300fc69cdbce1050e92</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value/>
+        <variable display_value="">a8ae0641c0a800664ae7b95978e88d56</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>867495880f371300fc69cdbce1050e91</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value/>
+        <variable display_value="">a8aaecf5c0a8006617527ddc62f2d668</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>8a7495880f371300fc69cdbce1050e90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value/>
+        <variable display_value="">1bd4c8c00a0a0b26635e191420fd194c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>120</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>8e7495880f371300fc69cdbce1050e8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value/>
+        <variable display_value="">a8ac8459c0a8006628d8903b8b2e579b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>c27495880f371300fc69cdbce1050e91</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
+        <variable display_value="">a8abc43ac0a800664b9b89a9f3f2c7a1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>1100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>c67495880f371300fc69cdbce1050e90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value/>
+        <variable display_value="">a8a5b2aac0a80066020adf74bd35c283</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>ca7495880f371300fc69cdbce1050e8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value/>
+        <variable display_value="">c35dc8950a0a0ba96248a70936f964a8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>115</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>ce7495880f371300fc69cdbce1050e91</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value/>
+        <variable display_value="">a8a29434c0a80066575097078b386f8d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>8a7495880f371300fc69cdbce1050e90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value/>
+        <variable display_value="">1bd4c8c00a0a0b26635e191420fd194c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>4a7495880f371300fc69cdbce1050e91</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value>any_each</value>
+        <variable display_value="">0698d53c0a0a0b2627f7cf654de211b6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>110</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>0a7495880f371300fc69cdbce1050e8e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value/>
+        <variable display_value="">a8a89323c0a80066046c6c1fd0df6475</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>115</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>ce7495880f371300fc69cdbce1050e91</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value/>
+        <variable display_value="">a8a29434c0a80066575097078b386f8d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>120</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>8e7495880f371300fc69cdbce1050e8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value/>
+        <variable display_value="">a8ac8459c0a8006628d8903b8b2e579b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>ca7495880f371300fc69cdbce1050e8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value/>
+        <variable display_value="">c35dc8950a0a0ba96248a70936f964a8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>350</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>067495880f371300fc69cdbce1050e90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value>reject</value>
+        <variable display_value="">4fc0fabe0a6a803f7f0af58179445dbb</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>867495880f371300fc69cdbce1050e91</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value/>
+        <variable display_value="">a8aaecf5c0a8006617527ddc62f2d668</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>c27495880f371300fc69cdbce1050e91</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
+        <variable display_value="">a8abc43ac0a800664b9b89a9f3f2c7a1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>1100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>c67495880f371300fc69cdbce1050e90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value/>
+        <variable display_value="">a8a5b2aac0a80066020adf74bd35c283</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>1150</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>027495880f371300fc69cdbce1050e91</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value/>
+        <variable display_value="">a8a63d44c0a8006617a1a568e6ee0d9e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>1200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>0a7495880f371300fc69cdbce1050e8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value/>
+        <variable display_value="">a8ad144ec0a8006638755cb3662df229</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>1200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>4e7495880f371300fc69cdbce1050e90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value>3bf802c20a0a0b52008e2859cd8abcf2</value>
+        <variable display_value="">a8a7bc7dc0a800666777a9bd9b84fef8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>1200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>827495880f371300fc69cdbce1050e92</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value/>
+        <variable display_value="">a8ae0641c0a800664ae7b95978e88d56</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>1360</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>427495880f371300fc69cdbce1050e90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value>// Set 'answer' to the number of seconds this timer should wait&#13;
+answer = 0;</value>
+        <variable display_value="">a8a16056c0a800660449c1bbc94d797f</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>1370</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>467495880f371300fc69cdbce1050e8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+        <value>// Set the variable 'answer' to '', 'approved' or 'rejected' to indicate the overall approval status for this approval.&#13;
+//&#13;
+// This script is responsible for setting the approval state for each group that is part of this approval activity before&#13;
+// returning the overall approval state for all of the group(s).&#13;
+//&#13;
+// When called, the following variables are available to the script:&#13;
+//&#13;
+//    Overall for all of the groups that are part of this approval activity:&#13;
+//        counts.total = total number of groups that are part of this approval&#13;
+//        counts.approved = # of groups that approved so far&#13;
+//        counts.rejected = # of groups that rejected so far&#13;
+//        counts.requested = # of groups that are pending approval&#13;
+//        counts.not_requested = # of groups that are not pending approval&#13;
+//        counts.not_required = # of groups that approval is not required&#13;
+//&#13;
+//    And for each group:&#13;
+//        groups[group_id].total = total number of users that are part of this group's approval&#13;
+//        groups[group_id].approved = # of users that approved so far&#13;
+//        groups[group_id].rejected = # of users that rejected so far&#13;
+//        groups[group_id].requested = # of users that are pending approval&#13;
+//        groups[group_id].not_requested = # of users that are not pending approval&#13;
+//        groups[group_id].not_required = # of users that approval is not required&#13;
+//&#13;
+//        groups[group_id].approvalIDs[state] = array of user ids that are at the specified approval state&#13;
+//&#13;
+//        Note: Iterate the groups using:&#13;
+//            for (var id in groups) {&#13;
+//                 var group = groups[id];&#13;
+//                 ...  group.total ...&#13;
+//            }&#13;
+</value>
+        <variable display_value="">069e81530a0a0b264289c1e23fe52558</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>2000</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>827495880f371300fc69cdbce1050e8f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:31:30</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">069bd78c0a0a0b267fa35f3d77e02a10</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>805415880f371300fc69cdbce1050ef5</document_key>
+        <order>2050</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>0e7495880f371300fc69cdbce1050e91</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:31:30</sys_updated_on>
+        <value>var preapprovalGroup = gs.getProperty('x_8821_glide_utils.item.development.preapproval');&#13;
+var answer = [];&#13;
+answer.push(preapprovalGroup);&#13;
+</value>
+        <variable display_value="">069c53740a0a0b260e35ee0ead2dbbcc</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Preapproval (set by property)">805415880f371300fc69cdbce1050ef5</activity>
+        <condition>activity.result == 'approved' || activity.result == 'skipped'</condition>
+        <condition_default display_value="Approved">586cdc4c0a0a0b5c00888cdfcb07778b</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Approved</name>
+        <order>1</order>
+        <short_description>Approval request was approved</short_description>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>0e7495880f371300fc69cdbce1050e92</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+    </wf_condition>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Preapproval (set by property)">805415880f371300fc69cdbce1050ef5</activity>
+        <condition>activity.result == 'rejected'</condition>
+        <condition_default display_value="Rejected">586d9d960a0a0b5c00509314d15d50d8</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Rejected</name>
+        <order>2</order>
+        <short_description>Approval request was rejected</short_description>
+        <skip_during_generate>true</skip_during_generate>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:29:30</sys_created_on>
+        <sys_id>067495880f371300fc69cdbce1050e93</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:29:30</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Set Values">1ca8d7cf0a0a0b265e9a000c2c08248c</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>6</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Request Fulfilled</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage display_value="Completed">42a399480f371300fc69cdbce1050ea9</stage>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:42:36</sys_created_on>
+        <sys_id>4e77910c0f371300fc69cdbce1050eaf</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:19</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Create Item Workflow">6f7359480f371300fc69cdbce1050e34</workflow_version>
+        <x>642</x>
+        <y>34</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=4e77910c0f371300fc69cdbce1050eaf"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>4e77910c0f371300fc69cdbce1050eaf</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:42:36</sys_created_on>
+        <sys_id>ce77910c0f371300fc69cdbce1050eaf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:13</sys_updated_on>
+        <value>active=false^state=3^EQ</value>
+        <variable display_value="">1cb38c8f0a0a0b266fb48e08de35f507</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>4e77910c0f371300fc69cdbce1050eaf</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:42:36</sys_created_on>
+        <sys_id>ce77910c0f371300fc69cdbce1050eaf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:13</sys_updated_on>
+        <value>active=false^state=3^EQ</value>
+        <variable display_value="">1cb38c8f0a0a0b266fb48e08de35f507</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Request Fulfilled">4e77910c0f371300fc69cdbce1050eaf</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:42:36</sys_created_on>
+        <sys_id>0677910c0f371300fc69cdbce1050eb0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:42:36</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Set Values">1ca8d7cf0a0a0b265e9a000c2c08248c</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>5</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Request Rejected</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage display_value="Request Cancelled">4aa399480f371300fc69cdbce1050ea8</stage>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:42:18</sys_created_on>
+        <sys_id>ccd659c80f371300fc69cdbce1050ecb</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:44:40</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Create Item Workflow">6f7359480f371300fc69cdbce1050e34</workflow_version>
+        <x>644</x>
+        <y>305</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=ccd659c80f371300fc69cdbce1050ecb"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ccd659c80f371300fc69cdbce1050ecb</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:42:18</sys_created_on>
+        <sys_id>6d6715c80f371300fc69cdbce1050e23</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:42:18</sys_updated_on>
+        <value>active=false^state=4^EQ</value>
+        <variable display_value="">1cb38c8f0a0a0b266fb48e08de35f507</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ccd659c80f371300fc69cdbce1050ecb</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:42:18</sys_created_on>
+        <sys_id>6d6715c80f371300fc69cdbce1050e23</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:42:18</sys_updated_on>
+        <value>active=false^state=4^EQ</value>
+        <variable display_value="">1cb38c8f0a0a0b266fb48e08de35f507</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Request Rejected">ccd659c80f371300fc69cdbce1050ecb</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:42:18</sys_created_on>
+        <sys_id>a56715c80f371300fc69cdbce1050e24</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:42:18</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Timer">3961a1da0a0a0b5c00ecd84822f70d85</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>7</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Wait 1 second</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>ffa7150c0f371300fc69cdbce1050e17</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:44:28</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Create Item Workflow">6f7359480f371300fc69cdbce1050e34</workflow_version>
+        <x>168</x>
+        <y>35</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=ffa7150c0f371300fc69cdbce1050e17"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>1310</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>00c7550c0f371300fc69cdbce1050e5a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value>3bf802c20a0a0b52008e2859cd8abcf2</value>
+        <variable display_value="">220cd53d0a0a0b214103bdc2ec5c7ab4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>1350</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>04c7550c0f371300fc69cdbce1050e59</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value/>
+        <variable display_value="">4cc836da0a0a0b520083ebc07da2f47c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>1320</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>0cc7550c0f371300fc69cdbce1050ee3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value/>
+        <variable display_value="">4cc6788c0a0a0b5200e6743c94001b16</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>40c7550c0f371300fc69cdbce1050e59</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value/>
+        <variable display_value="">220dc5a40a0a0b2109fbd28b8c4b6213</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>1350</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>44c7550c0f371300fc69cdbce1050ee4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value/>
+        <variable display_value="">4cc740fe0a0a0b520025dcf8e2ff78e7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>1320</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>48c7550c0f371300fc69cdbce1050ee3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
+        <variable display_value="">4cc4a4030a0a0b52007334f001376dc5</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>320</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>4cc7550c0f371300fc69cdbce1050e58</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value/>
+        <variable display_value="">4cba34da0a0a0b5200798c86eafe1203</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>1310</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>4cc7550c0f371300fc69cdbce1050e59</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value/>
+        <variable display_value="">c35dc0df0a0a0ba96248a7098d737925</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>310</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>80c7550c0f371300fc69cdbce1050ee4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value/>
+        <variable display_value="">21f80cd00a0a0b2101fcd5b5defc0810</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>1360</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>84c7550c0f371300fc69cdbce1050ee3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value/>
+        <variable display_value="">292b2f0e0a0a0b215aa2dd2cbc578dc5</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>3000</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>88c7550c0f371300fc69cdbce1050e59</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value>// Set 'answer' to the number of seconds this timer should wait&#13;
+answer = 0;</value>
+        <variable display_value="">293493710a0a0b2115e3e5b4fce1d12a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>1310</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>c0c7550c0f371300fc69cdbce1050e5a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value/>
+        <variable display_value="">21fd462c0a0a0b211c997276d7806c03</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>1360</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>c0c7550c0f371300fc69cdbce1050ee3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value/>
+        <variable display_value="">292bd15e0a0a0b215a040c701033e3c5</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>350</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>c4c7550c0f371300fc69cdbce1050e59</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value/>
+        <variable display_value="">4cbfe48a0a0a0b5200cf8b82cc6685f1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>1360</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>ccc7550c0f371300fc69cdbce1050ee3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value/>
+        <variable display_value="">292c91070a0a0b212543d91ffde5014c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>310</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>80c7550c0f371300fc69cdbce1050ee4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value/>
+        <variable display_value="">21f80cd00a0a0b2101fcd5b5defc0810</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>320</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>4cc7550c0f371300fc69cdbce1050e58</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value/>
+        <variable display_value="">4cba34da0a0a0b5200798c86eafe1203</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>350</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>c4c7550c0f371300fc69cdbce1050e59</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value/>
+        <variable display_value="">4cbfe48a0a0a0b5200cf8b82cc6685f1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>40c7550c0f371300fc69cdbce1050e59</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value/>
+        <variable display_value="">220dc5a40a0a0b2109fbd28b8c4b6213</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>1310</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>00c7550c0f371300fc69cdbce1050e5a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value>3bf802c20a0a0b52008e2859cd8abcf2</value>
+        <variable display_value="">220cd53d0a0a0b214103bdc2ec5c7ab4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>1310</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>4cc7550c0f371300fc69cdbce1050e59</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value/>
+        <variable display_value="">c35dc0df0a0a0ba96248a7098d737925</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>1310</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>c0c7550c0f371300fc69cdbce1050e5a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value/>
+        <variable display_value="">21fd462c0a0a0b211c997276d7806c03</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>1320</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>0cc7550c0f371300fc69cdbce1050ee3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value/>
+        <variable display_value="">4cc6788c0a0a0b5200e6743c94001b16</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>1320</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>48c7550c0f371300fc69cdbce1050ee3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
+        <variable display_value="">4cc4a4030a0a0b52007334f001376dc5</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>1350</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>04c7550c0f371300fc69cdbce1050e59</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value/>
+        <variable display_value="">4cc836da0a0a0b520083ebc07da2f47c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>1350</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>44c7550c0f371300fc69cdbce1050ee4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value/>
+        <variable display_value="">4cc740fe0a0a0b520025dcf8e2ff78e7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>1360</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>84c7550c0f371300fc69cdbce1050ee3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value/>
+        <variable display_value="">292b2f0e0a0a0b215aa2dd2cbc578dc5</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>1360</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>c0c7550c0f371300fc69cdbce1050ee3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value/>
+        <variable display_value="">292bd15e0a0a0b215a040c701033e3c5</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>1360</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>ccc7550c0f371300fc69cdbce1050ee3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value/>
+        <variable display_value="">292c91070a0a0b212543d91ffde5014c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>ffa7150c0f371300fc69cdbce1050e17</document_key>
+        <order>3000</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>88c7550c0f371300fc69cdbce1050e59</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+        <value>// Set 'answer' to the number of seconds this timer should wait&#13;
+answer = 0;</value>
+        <variable display_value="">293493710a0a0b2115e3e5b4fce1d12a</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Wait 1 second">ffa7150c0f371300fc69cdbce1050e17</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:43:51</sys_created_on>
+        <sys_id>4cc7550c0f371300fc69cdbce1050ee4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:43:51</sys_updated_on>
+    </wf_condition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">46a399480f371300fc69cdbce1050ea6</condition>
+        <from display_value="Begin">02a311c40f371300fc69cdbce1050e9f</from>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:44:06</sys_created_on>
+        <sys_id>2fc7950c0f371300fc69cdbce1050e78</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:44:06</sys_updated_on>
+        <to display_value="Preapproval (set by property)">805415880f371300fc69cdbce1050ef5</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">a56715c80f371300fc69cdbce1050e24</condition>
+        <from display_value="Request Rejected">ccd659c80f371300fc69cdbce1050ecb</from>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:42:23</sys_created_on>
+        <sys_id>6a67910c0f371300fc69cdbce1050e89</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:42:23</sys_updated_on>
+        <to display_value="End">cea399480f371300fc69cdbce1050ea6</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Approved">0e7495880f371300fc69cdbce1050e92</condition>
+        <from display_value="Preapproval (set by property)">805415880f371300fc69cdbce1050ef5</from>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:44:15</sys_created_on>
+        <sys_id>79d7150c0f371300fc69cdbce1050e71</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:44:15</sys_updated_on>
+        <to display_value="Wait 1 second">ffa7150c0f371300fc69cdbce1050e17</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">0677910c0f371300fc69cdbce1050eb0</condition>
+        <from display_value="Request Fulfilled">4e77910c0f371300fc69cdbce1050eaf</from>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:42:47</sys_created_on>
+        <sys_id>948759880f371300fc69cdbce1050e5b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:42:47</sys_updated_on>
+        <to display_value="End">cea399480f371300fc69cdbce1050ea6</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">7ba591c80f371300fc69cdbce1050e5d</condition>
+        <from display_value="Create Item, Variables, UI Policy, UI Policy Actions, Update Set, and move all updates to update set">0825d5880f371300fc69cdbce1050e3f</from>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:42:44</sys_created_on>
+        <sys_id>b37791c80f371300fc69cdbce1050edf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:42:44</sys_updated_on>
+        <to display_value="Request Fulfilled">4e77910c0f371300fc69cdbce1050eaf</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Rejected">067495880f371300fc69cdbce1050e93</condition>
+        <from display_value="Preapproval (set by property)">805415880f371300fc69cdbce1050ef5</from>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:35:12</sys_created_on>
+        <sys_id>d1c5dd880f371300fc69cdbce1050ebf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:42:23</sys_updated_on>
+        <to display_value="Request Rejected">ccd659c80f371300fc69cdbce1050ecb</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">4cc7550c0f371300fc69cdbce1050ee4</condition>
+        <from display_value="Wait 1 second">ffa7150c0f371300fc69cdbce1050e17</from>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:44:21</sys_created_on>
+        <sys_id>dfd7910c0f371300fc69cdbce1050eb2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:44:21</sys_updated_on>
+        <to display_value="Create Item, Variables, UI Policy, UI Policy Actions, Update Set, and move all updates to update set">0825d5880f371300fc69cdbce1050e3f</to>
+    </wf_transition>
+    <wf_estimated_runtime_config action="INSERT_OR_UPDATE">
+        <estimated_run_time/>
+        <no_of_data_points>1</no_of_data_points>
+        <percentage_threshold_ert>20</percentage_threshold_ert>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 14:25:57</sys_created_on>
+        <sys_id>c6a311c40f371300fc69cdbce1050e9d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 14:25:57</sys_updated_on>
+        <workflow_version display_value="Create Item Workflow">6f7359480f371300fc69cdbce1050e34</workflow_version>
+    </wf_estimated_runtime_config>
+    <wf_workflow_version action="update_multiple" query="workflow=82a311c40f371300fc69cdbce1050e9e^sys_id!=6f7359480f371300fc69cdbce1050e34">
+        <published>false</published>
+    </wf_workflow_version>
+</record_update>

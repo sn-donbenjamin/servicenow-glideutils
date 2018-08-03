@@ -7,7 +7,7 @@
         <applies_target_record>false</applies_target_record>
         <applies_to>item</applies_to>
         <catalog_conditions>IO:64e5be770fe79300fc69cdbce1050e3e=^EQ</catalog_conditions>
-        <catalog_item display_value="Make Item in Dev">cada94270f2b5300fc69cdbce1050e2e</catalog_item>
+        <catalog_item display_value="Create Item">cada94270f2b5300fc69cdbce1050e2e</catalog_item>
         <conditions/>
         <description/>
         <global>true</global>

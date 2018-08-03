@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_policy_rule">
+    <sys_data_policy_rule action="INSERT_OR_UPDATE">
+        <disabled>false</disabled>
+        <field>task_1_short_description</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_data_policy_rule</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 15:57:16</sys_created_on>
+        <sys_data_policy display_value="1 approval 1 task">4638a5c40f771300fc69cdbce1050e3b</sys_data_policy>
+        <sys_id>ab88e5c40f771300fc69cdbce1050e40</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>task_1_short_description</sys_name>
+        <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
+        <sys_update_name>sys_data_policy_rule_ab88e5c40f771300fc69cdbce1050e40</sys_update_name>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 15:57:16</sys_updated_on>
+        <table>x_8821_glide_utils_std_wf</table>
+    </sys_data_policy_rule>
+</record_update>

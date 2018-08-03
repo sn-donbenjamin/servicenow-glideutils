@@ -2,7 +2,7 @@
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
         <attributes/>
-        <cat_item display_value="Make Item in Dev">cada94270f2b5300fc69cdbce1050e2e</cat_item>
+        <cat_item display_value="Create Item">cada94270f2b5300fc69cdbce1050e2e</cat_item>
         <category/>
         <choice_direction>down</choice_direction>
         <choice_field/>
