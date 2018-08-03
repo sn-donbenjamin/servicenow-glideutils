@@ -15,7 +15,7 @@
         <global>true</global>
         <isolate_script>false</isolate_script>
         <messages/>
-        <name>Control Param Vars</name>
+        <name>Test Item Control Param Vars</name>
         <order/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
   if (isLoading || newValue == '') {
@@ -46,15 +46,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>fe50e1c00f635300fc69cdbce1050ef6</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Control Param Vars</sys_name>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Test Item Control Param Vars</sys_name>
         <sys_overrides/>
         <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
         <sys_policy/>
         <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
         <sys_update_name>catalog_script_client_fe50e1c00f635300fc69cdbce1050ef6</sys_update_name>
         <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
-        <sys_updated_on>2018-07-22 06:21:38</sys_updated_on>
+        <sys_updated_on>2018-08-01 20:59:15</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>

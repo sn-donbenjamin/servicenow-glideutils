@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>show_image</name>
+        <scoped_name>x_8821_glide_utils_show_image</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 03:17:31</sys_created_on>
+        <sys_id>d49aba7b0fe79300fc69cdbce1050e25</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>show_image</sys_name>
+        <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
+        <sys_update_name>sys_ui_macro_d49aba7b0fe79300fc69cdbce1050e25</sys_update_name>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 04:13:11</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<div>
+	<script>
+		function setImage(val){
+			g_form.setValue('workflow',val);
+			if(val !== ""){
+				jQuery('#flow-image').attr('src', val + '.png');
+				jQuery('#flow-image').attr('class','');
+			} else {
+				jQuery('#flow-image').attr('class','hide');
+			}
+		}
+	</script>
+  <!-- Select Basic -->
+  <div class="form-group">
+    <div class="col-md-12">
+      <select id="flow" name="flow" class="form-control" onchange="setImage(this.value)">
+        <option value=""  >-- None --</option>
+        <option value="0-approval-1-task-serial"   >One task</option>
+        <option value="0-approval-2-task-serial"   >Two tasks (serial)</option>
+        <option value="0-approval-2-task-parallel" >Two tasks (parallel)</option>
+        <option value="1-approval-1-task-serial"   >One approval and one task</option>
+        <option value="1-approval-2-task-serial"   >One approval and two tasks (serial)</option>
+        <option value="1-approval-2-task-parallel" >One approval and two tasks (parallel)</option>
+        <option value="2-approval-1-task-serial"   >Two approval and one task</option>
+        <option value="2-approval-2-task-serial"   >Two approval and two tasks (serial)</option>
+        <option value="2-approval-2-task-parallel" >Two approval and two tasks (parallel)</option>
+      </select>
+    </div>
+  </div>
+  <img id="flow-image" src="{{c.data.image}}.png" class="hide" />
+</div>
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

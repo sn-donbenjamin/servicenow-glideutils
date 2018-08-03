@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item display_value="Make Item in Dev">cada94270f2b5300fc69cdbce1050e2e</catalog_item>
+        <catalog_variable>IO:c5899bff0f2b9300fc69cdbce1050eb5</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <mandatory>false</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-03 06:04:29</sys_created_on>
+        <sys_id>e8e0ebb70f6b9300fc69cdbce1050e9a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>task_2_group</sys_name>
+        <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_e8e0ebb70f6b9300fc69cdbce1050e9a</sys_update_name>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-03 06:04:29</sys_updated_on>
+        <table/>
+        <ui_policy display_value="Workflow is Two Approvals One Task">a0e0e3b70f6b9300fc69cdbce1050e49</ui_policy>
+        <variable>task_2_group</variable>
+        <variable_set/>
+        <visible>false</visible>
+    </catalog_ui_policy_action>
+</record_update>

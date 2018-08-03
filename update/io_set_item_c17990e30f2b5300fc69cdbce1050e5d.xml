@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="INSERT_OR_UPDATE">
+        <order>6000</order>
+        <sc_cat_item display_value="Test Item">585101000f235300fc69cdbce1050efb</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-01 20:55:37</sys_created_on>
+        <sys_id>c17990e30f2b5300fc69cdbce1050e5d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Multirow Variable Set.Test Item</sys_name>
+        <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
+        <sys_update_name>io_set_item_c17990e30f2b5300fc69cdbce1050e5d</sys_update_name>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-01 20:55:37</sys_updated_on>
+        <variable_set display_value="Multirow Variable Set">d689d0e30f2b5300fc69cdbce1050e2b</variable_set>
+    </io_set_item>
+</record_update>
