@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Standard Workflow" max_length="40" name="x_8821_glide_utils_std_wf" type="collection">
+    <element attributes="update_synch=true" extends="sys_metadata" label="Standard Workflow" max_length="40" name="x_8821_glide_utils_std_wf" type="collection">
         <element label="Approval 1 Group" max_length="32" name="approval_1_group" reference="sys_user_group" type="reference"/>
         <element label="Approval 2 Group" max_length="32" name="approval_2_group" reference="sys_user_group" type="reference"/>
         <element display="true" label="Item" max_length="32" name="item" reference="sc_cat_item" reference_qual="workflow=4b4d55cc0f371300fc69cdbce1050e47^EQ" reference_qual_condition="workflow=4b4d55cc0f371300fc69cdbce1050e47^EQ" type="reference"/>

@@ -31,12 +31,12 @@
         <sys_created_by>jace.benson@protonmail.com</sys_created_by>
         <sys_created_on>2018-08-03 14:25:57</sys_created_on>
         <sys_id>6f7359480f371300fc69cdbce1050e34</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
-        <sys_updated_on>2018-08-03 14:44:49</sys_updated_on>
+        <sys_updated_on>2018-08-03 19:09:54</sys_updated_on>
         <table>sc_req_item</table>
         <timezone/>
-        <validated>false</validated>
+        <validated>true</validated>
         <workflow display_value="Create Item Workflow">82a311c40f371300fc69cdbce1050e9e</workflow>
     </wf_workflow_version>
     <wf_workflow action="INSERT_OR_UPDATE">

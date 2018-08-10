@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_8821_glide_utils.makeItem</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>makeItem</name>
+        <script><![CDATA[var makeItem = Class.create();
+makeItem.prototype = {
+	/*
+	//https://dev32369.service-now.com/nav_to.do?uri=sc_req_item.do?sys_id=c5a452800ff71300fc69cdbce1050e53%26sysparm_view=ess
+var itemGR = new GlideRecord('sc_req_item');
+itemGR.get('c5a452800ff71300fc69cdbce1050e53');
+
+var mi = new x_8821_glide_utils.makeItem();
+//mi.createStdWf(itemGR);
+mi.execute(itemGR);
+*/
+	initialize: function() {
+	},
+	execute: function(catalogItemGR) {
+		try {
+			// Create Item, related sc_cat_item_category and sc_cat_item_catalog
+			var sys_ids = this.createItem(catalogItemGR);
+			// Create Variables
+			sys_ids = sys_ids.concat(this.createVariables(catalogItemGR));
+			// Create UI Policy
+			sys_ids.push(this.createUIPolicy(catalogItemGR));
+			// Create UI Policy Actions
+			// sys_ids = sys_ids.concat(this.createUIPolicyActions(catalogItemGR));
+			// Create x_8821_glide_utils_std_wf record
+			// Force x_8821_glide_utils_std_wf record into update set
+			sys_ids.push(this.createStdWf(catalogItemGR));	
+			// Create Update set
+			var updateSetSysId = this.createUpdateSet(catalogItemGR.variables.item_name.toString());
+			// Move updates to Update set
+			this.moveUpdates(sys_ids, updateSetSysId);		
+			// Update Catalog Item with information on how to access newly made item
+		} catch(e) {
+			gs.info(JSON.stringify(e));
+		}
+	},
+	_callViaREST:function (restObj){
+		var instance = gs.getProperty('x_8821_glide_utils.item.development.instance');
+		var username = gs.getProperty('x_8821_glide_utils.item.development.username');
+		var password = gs.getProperty('x_8821_glide_utils.item.development.password');
+		var returnObj = {};
+		var restMessage = new sn_ws.RESTMessageV2();
+		restMessage.setBasicAuth(username, password);
+		restMessage.setHttpMethod(restObj.method);
+		restMessage.setEndpoint(instance + restObj.endpoint);
+		restMessage.setRequestBody(JSON.stringify(restObj.requestBody));
+		gs.info(restMessage.getRequestBody());
+		var response = restMessage.execute();
+		var error = response.haveError();
+		if(error){
+			var errorCode = response.getErrorCode();
+			var errorMsg = response.getErrorMessage();
+			returnObj.errorCode = errorCode;
+			returnObj.errorMsg = errorMsg;
+		} else {
+		}
+		var headerVal = response.getHeader("Content-Type");
+		var headers = response.getHeaders();
+		var queryString = response.getQueryString();
+		var statusCode = response.getStatusCode();
+		var responseBody = response.getBody();
+		gs.info(responseBody);
+		returnObj.statusCode = statusCode;
+		returnObj.responseBody = JSON.parse(responseBody).result;
+		return returnObj;
+	},
+	moveUpdates: function(arrOfSysIds, updateSetSysId){
+		gs.info("moving to update set: " + updateSetSysId);
+		arrOfSysIds.map(function(sysid){
+			try {
+				var endpoint = "api/now/table/sys_update_xml";
+				endpoint += "?sysparm_query=nameLIKE" + sysid;
+				endpoint += encodeURIComponent("^update_setISNOTEMPTY");
+				endpoint += "&sysparm_fields=sys_id";
+				var findUpdate = new x_8821_glide_utils.makeItem()._callViaREST({
+					method: "get",
+					endpoint: endpoint
+				});
+				gs.info(JSON.stringify(update.responseBody));
+				gs.info('FOUND update: /sys_update_xml_list.do?sysparm_query=sys_id=' + findUpdate.responseBody[0].sys_id);
+				var moveEndpoint = "api/now/table/sys_update_xml/" + findUpdate.responseBody[0].sys_id;
+				var moveUpdate = new x_8821_glide_utils.makeItem()._callViaREST({
+					method: "put",
+					endpoint: moveEndpoint,
+					requestBody: {
+						update_set: updateSetSysId
+					}
+				});
+				gs.info(JSON.stringify(moveUpdate));
+			} catch(e) {
+				gs.info(JSON.stringify(e));
+			}
+		});
+	},
+	createItem: function(catalogItemGR){
+		try {
+			var endpoint = "api/now/table/sc_cat_item";
+			var item = this._callViaREST({
+				method: "post",
+				endpoint: endpoint,
+				requestBody: {
+					name: catalogItemGR.variables.item_name.toString(),
+					category: catalogItemGR.variables.category.toString(),
+					catalog: catalogItemGR.variables.catalog.toString(),
+					workflow: this.workflow["standard-workflow"]
+				}
+			});
+			var returnArr = [];
+			returnArr.push(item.responseBody.sys_id);
+			this.item = item.responseBody.sys_id;
+			var categoryEndpoint = "api/now/table/sc_cat_item_category";
+			categoryEndpoint += "?sysparm_query=sc_cat_item=" + item.responseBody.sys_id;
+			categoryEndpoint += "&sysparm_fields=sys_id";
+			var itemCategory = this._callViaREST({
+				method: "get",
+				endpoint: categoryEndpoint
+			});
+			returnArr.push(itemCategory.responseBody[0].sys_id);
+			var catalogEndpoint = "api/now/table/sc_cat_item_catalog";
+			catalogEndpoint += "?sysparm_query=sc_cat_item=" + item.responseBody.sys_id;
+			catalogEndpoint += "&sysparm_fields=sys_id";
+			var itemCatalog = this._callViaREST({
+				method: "get",
+				endpoint: catalogEndpoint
+			});
+			returnArr.push(itemCatalog.responseBody[0].sys_id);
+			return returnArr;
+		} catch (e) {
+			return JSON.stringify(e);
+		}
+	},
+	createVariables: function(catalogItemGR){},
+	createUIPolicy: function(catalogItemGR){},
+	createUIPolicyActions: function(catalogItemGR){},
+	createUpdateSet: function(name){
+		try {
+			var endpoint = "api/now/table/sys_update_set";
+			var gdt = new GlideDateTime();
+			var date = gdt.getDisplayValue().split(' ')[0];
+			var response = this._callViaREST({
+				method: "post",
+				endpoint: endpoint,
+				requestBody: {
+					name: date + ' ' + name
+				}
+			});
+			gs.info(JSON.stringify(response.responseBody));
+			return response.responseBody.sys_id;
+		} catch (e) {
+			return JSON.stringify(e);
+		}
+	},
+	
+	workflow:{
+		"standard-workflow"         :"4b4d55cc0f371300fc69cdbce1050e47",
+		"0-approval-1-task-serial"  :"6aaf55400f771300fc69cdbce1050e14",
+		"0-approval-2-task-serial"  :"e1f0a1400f771300fc69cdbce1050e35",
+		"0-approval-2-task-parallel":"756165800f771300fc69cdbce1050e38",
+		"1-approval-1-task-serial"  :"13c169800f771300fc69cdbce1050ee9",
+		"1-approval-2-task-serial"  :"c6836dc00f771300fc69cdbce1050e9b",
+		"1-approval-2-task-parallel":"4ca2ed800f771300fc69cdbce1050eea",
+		"2-approval-1-task-serial"  :"b144a5040f771300fc69cdbce1050ec2",
+		"2-approval-2-task-serial"  :"0845ad040f771300fc69cdbce1050e92",
+		"2-approval-2-task-parallel":"09c4a9040f771300fc69cdbce1050e2f"
+	},
+	createStdWf: function(catalogItemGR){
+		try {
+			var endpoint = "api/now/table/x_8821_glide_utils_std_wf";
+			// approval_1_group	
+			// approval_2_group	
+			// task_1_group	
+			// task_2_group
+			var response = this._callViaREST({
+				method: "post",
+				endpoint: endpoint,
+				requestBody: {
+					item: this.item,
+					workflow: this.workflow[catalogItemGR.variables.workflow.toString()],
+					approval_1_group: catalogItemGR.variables.approval_1_group.toString(),
+					approval_2_group: catalogItemGR.variables.approval_2_group.toString(),
+					task_1_group: catalogItemGR.variables.task_1_group.toString(),
+					task_1_short_description: catalogItemGR.variables.task_1_short_description.toString(),
+					task_1_description: catalogItemGR.variables.task_1_description.toString(),
+					task_2_group: catalogItemGR.variables.task_2_group.toString(),
+					task_2_short_description: catalogItemGR.variables.task_2_short_description.toString(),
+					task_2_description: catalogItemGR.variables.task_2_description.toString()
+				}
+			});
+			gs.info(JSON.stringify(response.responseBody));
+			return response.responseBody.sys_id;
+		} catch (e) {
+			
+		}
+	},
+	type: 'makeItem'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>jace.benson@protonmail.com</sys_created_by>
+        <sys_created_on>2018-08-08 22:18:31</sys_created_on>
+        <sys_id>d5cf2c790f335300fc69cdbce1050e9f</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>makeItem</sys_name>
+        <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
+        <sys_update_name>sys_script_include_d5cf2c790f335300fc69cdbce1050e9f</sys_update_name>
+        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
+        <sys_updated_on>2018-08-09 00:14:14</sys_updated_on>
+    </sys_script_include>
+</record_update>
