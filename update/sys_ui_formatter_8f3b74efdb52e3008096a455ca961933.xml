@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_formatter">
+    <sys_ui_formatter action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <angular_module/>
+        <formatter>x_8821_glide_utils_Activity Formatter - Custom.xml</formatter>
+        <name>Activities (Custom)</name>
+        <sys_class_name>sys_ui_formatter</sys_class_name>
+        <sys_created_by>jacebenson</sys_created_by>
+        <sys_created_on>2018-12-16 16:15:33</sys_created_on>
+        <sys_id>8f3b74efdb52e3008096a455ca961933</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Activities (Custom)</sys_name>
+        <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
+        <sys_update_name>sys_ui_formatter_8f3b74efdb52e3008096a455ca961933</sys_update_name>
+        <sys_updated_by>jacebenson</sys_updated_by>
+        <sys_updated_on>2018-12-16 16:15:33</sys_updated_on>
+        <table>task</table>
+        <type>formatter</type>
+    </sys_ui_formatter>
+</record_update>

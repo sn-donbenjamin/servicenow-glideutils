@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>Activity Formatter - Custom</name>
+        <scoped_name>x_8821_glide_utils_Activity Formatter - Custom</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>jacebenson</sys_created_by>
+        <sys_created_on>2018-12-16 16:14:52</sys_created_on>
+        <sys_id>bf1bf0efdb52e3008096a455ca96198b</sys_id>
+        <sys_mod_count>37</sys_mod_count>
+        <sys_name>Activity Formatter - Custom</sys_name>
+        <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
+        <sys_update_name>sys_ui_macro_bf1bf0efdb52e3008096a455ca96198b</sys_update_name>
+        <sys_updated_by>jacebenson</sys_updated_by>
+        <sys_updated_on>2018-12-16 17:37:19</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<g:evaluate>
+		try{var debug = ['test'];
+		var documentId = RP.getParameterValue('sys_id');
+		var referringURL = RP.getReferringURL();
+		var table = referringURL.split('.')[0];
+		var current = new GlideRecord(table);
+		current.get(documentId);
+		var debugging = referringURL.indexOf('debug')>-1;
+		var entries = [];
+		var x = 0;
+		var rearrangedEntries = {};
+		var updates = 0;
+		var users = {};
+		var sys_history_set = new GlideRecord('sys_history_set');
+		sys_history_set.addQuery('id', documentId);
+		sys_history_set.query();
+		debug.push('sys_history_set query:' + sys_history_set.getEncodedQuery());
+		if (sys_history_set.next()) {
+			var sys_audit = new GlideRecord('sys_audit');
+			sys_audit.addQuery('documentkey', documentId);// sys_history_set.getValue('sys_id'));
+			sys_audit.orderBy('record_checkpoint');
+			debug.push('sys_audit query:' + sys_audit.getEncodedQuery());
+			sys_audit.query();
+			while (sys_audit.next()) {
+				if (typeof users[sys_audit.getValue('user')] === 'undefined') {
+					var sys_user = new GlideRecord('sys_user');
+					if (sys_user.get('user_name', sys_audit.getValue('user'))) {
+						users[sys_audit.getValue('user')] = sys_user.getDisplayValue();
+					} else {
+						users[sys_audit.getValue('user')] = sys_audit.getValue('user')
+					}
+				}
+
+				entries.push({
+					value: sys_audit.getValue('newvalue'),
+					label: current[sys_audit.getValue('fieldname')].getLabel(),
+					field: sys_audit.getValue('fieldname'),
+					user: users[sys_audit.getValue('user')],
+					order: sys_audit.getValue('record_checkpoint'),
+					time: new GlideDateTime(sys_audit.getValue('sys_created_on')).getDisplayValue()
+				});
+			}
+			entries.map(function (update) {
+				rearrangedEntries[update.order] = {
+					user: update.user,
+					time: update.time,
+					fields: []
+				};
+				rearrangedEntries[update.order].fields.push({
+					label: update.label,
+					value: update.value,
+					classNames: (function () {
+						if (update.field === 'work_notes') {
+							return 'alert alert-warning';
+						} else {
+							return 'alert alert-info';
+						}
+					})()
+				});
+			});
+		}
+		}catch(e){
+		  gs.addErrorMessage(JSON.stringify(e));
+		}
+	</g:evaluate>
+	${JSON.stringify(debug)}
+		<div class="container">
+			<j:while test="${parseInt(d,10)!=parseInt(debug.length,10)}">
+				<div class="row">${debug[d]}</div>
+				<g:evaluate>d = d + 1</g:evaluate>
+			</j:while>
+		</div>
+	<p>Documentid ${documentId}</p>
+	<p>Referring URL ${referringURL}</p>
+	<p>Entries length ${entries.length}</p>
+	<p>Entries ${JSON.stringify(entries)}</p>
+	<p>Rearranged Entries Length ${rearrangedEntries.length}</p>
+	<p>Rearranged Entries ${JSON.stringify(rearrangedEntries)}</p>
+	<div class="container">
+		<div class="row">
+			<j:while test="${parseInt(x,10)!=(Object.keys(rearrangedEntries).length)}">
+				${x}
+				<blockquote class="blockquote">
+					<div class="${rearrangedEntries[x].classNames}" role="alert">
+						${JSON.stringify(rearrangedEntries[x])}
+						<g:evaluate>var y = 0;</g:evaluate>
+						<j:while test="${parseInt(y,10)!=parseInt(rearrangedEntries[x].fields.length)}">
+							<div class="${rearrangedEntries[x].fields[y].classNames}">
+								<p>${rearrangedEntries[x].fields[y].label}</p>
+								<p>${rearrangedEntries[x].fields[y].value}</p>
+							</div>
+							<g:evaluate>y = y + 1</g:evaluate>
+						</j:while>
+						<footer class="blockquote-footer">${rearrangedEntries[x].time} (<cite title="Source Title">${rearrangedEntries[x].user}</cite>)</footer>
+					</div>
+				</blockquote>
+				<g:evaluate>
+					x = x + 1;
+				</g:evaluate>
+			</j:while>
+		</div>
+	</div>
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

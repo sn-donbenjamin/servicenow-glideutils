@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="a92c7023db92e3008096a455ca961952" sys_domain="global" table="ticket" version="3" view="example_view">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>jacebenson</sys_created_by>
+            <sys_created_on>2018-12-16 16:19:07</sys_created_on>
+            <sys_id>843c7023db92e3008096a455ca9619f2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="ticket" sys_domain="global" view="ad2c7023db92e3008096a455ca96194c">a92c7023db92e3008096a455ca961952</sys_ui_section>
+            <sys_updated_by>jacebenson</sys_updated_by>
+            <sys_updated_on>2018-12-16 16:19:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>assignment_group</element>
+            <position>1</position>
+            <sys_created_by>jacebenson</sys_created_by>
+            <sys_created_on>2018-12-16 16:19:07</sys_created_on>
+            <sys_id>083c7023db92e3008096a455ca9619f2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="ticket" sys_domain="global" view="ad2c7023db92e3008096a455ca96194c">a92c7023db92e3008096a455ca961952</sys_ui_section>
+            <sys_updated_by>jacebenson</sys_updated_by>
+            <sys_updated_on>2018-12-16 16:19:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>assigned_to</element>
+            <position>2</position>
+            <sys_created_by>jacebenson</sys_created_by>
+            <sys_created_on>2018-12-16 16:19:07</sys_created_on>
+            <sys_id>883c7023db92e3008096a455ca9619f2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="ticket" sys_domain="global" view="ad2c7023db92e3008096a455ca96194c">a92c7023db92e3008096a455ca961952</sys_ui_section>
+            <sys_updated_by>jacebenson</sys_updated_by>
+            <sys_updated_on>2018-12-16 16:19:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>cmdb_ci</element>
+            <position>3</position>
+            <sys_created_by>jacebenson</sys_created_by>
+            <sys_created_on>2018-12-16 16:19:07</sys_created_on>
+            <sys_id>0c3c7023db92e3008096a455ca9619f2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="ticket" sys_domain="global" view="ad2c7023db92e3008096a455ca96194c">a92c7023db92e3008096a455ca961952</sys_ui_section>
+            <sys_updated_by>jacebenson</sys_updated_by>
+            <sys_updated_on>2018-12-16 16:19:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>parent</element>
+            <position>4</position>
+            <sys_created_by>jacebenson</sys_created_by>
+            <sys_created_on>2018-12-16 16:19:07</sys_created_on>
+            <sys_id>8c3c7023db92e3008096a455ca9619f2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="ticket" sys_domain="global" view="ad2c7023db92e3008096a455ca96194c">a92c7023db92e3008096a455ca961952</sys_ui_section>
+            <sys_updated_by>jacebenson</sys_updated_by>
+            <sys_updated_on>2018-12-16 16:19:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>5</position>
+            <sys_created_by>jacebenson</sys_created_by>
+            <sys_created_on>2018-12-16 16:19:07</sys_created_on>
+            <sys_id>003c7023db92e3008096a455ca9619f3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="ticket" sys_domain="global" view="ad2c7023db92e3008096a455ca96194c">a92c7023db92e3008096a455ca961952</sys_ui_section>
+            <sys_updated_by>jacebenson</sys_updated_by>
+            <sys_updated_on>2018-12-16 16:19:07</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>priority</element>
+            <position>6</position>
+            <sys_created_by>jacebenson</sys_created_by>
+            <sys_created_on>2018-12-16 16:19:07</sys_created_on>
+            <sys_id>803c7023db92e3008096a455ca9619f3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="ticket" sys_domain="global" view="ad2c7023db92e3008096a455ca96194c">a92c7023db92e3008096a455ca961952</sys_ui_section>
+            <sys_updated_by>jacebenson</sys_updated_by>
+            <sys_updated_on>2018-12-16 16:19:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <position>7</position>
+            <sys_created_by>jacebenson</sys_created_by>
+            <sys_created_on>2018-12-16 16:19:07</sys_created_on>
+            <sys_id>043c7023db92e3008096a455ca9619f3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="ticket" sys_domain="global" view="ad2c7023db92e3008096a455ca96194c">a92c7023db92e3008096a455ca961952</sys_ui_section>
+            <sys_updated_by>jacebenson</sys_updated_by>
+            <sys_updated_on>2018-12-16 16:19:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>due_date</element>
+            <position>8</position>
+            <sys_created_by>jacebenson</sys_created_by>
+            <sys_created_on>2018-12-16 16:19:07</sys_created_on>
+            <sys_id>843c7023db92e3008096a455ca9619f3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="ticket" sys_domain="global" view="ad2c7023db92e3008096a455ca96194c">a92c7023db92e3008096a455ca961952</sys_ui_section>
+            <sys_updated_by>jacebenson</sys_updated_by>
+            <sys_updated_on>2018-12-16 16:19:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>9</position>
+            <sys_created_by>jacebenson</sys_created_by>
+            <sys_created_on>2018-12-16 16:19:07</sys_created_on>
+            <sys_id>083c7023db92e3008096a455ca9619f3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="ticket" sys_domain="global" view="ad2c7023db92e3008096a455ca96194c">a92c7023db92e3008096a455ca961952</sys_ui_section>
+            <sys_updated_by>jacebenson</sys_updated_by>
+            <sys_updated_on>2018-12-16 16:19:07</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>short_description</element>
+            <position>10</position>
+            <sys_created_by>jacebenson</sys_created_by>
+            <sys_created_on>2018-12-16 16:19:07</sys_created_on>
+            <sys_id>883c7023db92e3008096a455ca9619f3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="ticket" sys_domain="global" view="ad2c7023db92e3008096a455ca96194c">a92c7023db92e3008096a455ca961952</sys_ui_section>
+            <sys_updated_by>jacebenson</sys_updated_by>
+            <sys_updated_on>2018-12-16 16:19:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>comments</element>
+            <position>11</position>
+            <sys_created_by>jacebenson</sys_created_by>
+            <sys_created_on>2018-12-16 16:19:07</sys_created_on>
+            <sys_id>0c3c7023db92e3008096a455ca9619f3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="ticket" sys_domain="global" view="ad2c7023db92e3008096a455ca96194c">a92c7023db92e3008096a455ca961952</sys_ui_section>
+            <sys_updated_by>jacebenson</sys_updated_by>
+            <sys_updated_on>2018-12-16 16:19:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>work_notes</element>
+            <position>12</position>
+            <sys_created_by>jacebenson</sys_created_by>
+            <sys_created_on>2018-12-16 16:19:07</sys_created_on>
+            <sys_id>8c3c7023db92e3008096a455ca9619f3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="ticket" sys_domain="global" view="ad2c7023db92e3008096a455ca96194c">a92c7023db92e3008096a455ca961952</sys_ui_section>
+            <sys_updated_by>jacebenson</sys_updated_by>
+            <sys_updated_on>2018-12-16 16:19:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>x_8821_glide_utils_Activity Formatter - Custom.xml</element>
+            <position>13</position>
+            <sys_created_by>jacebenson</sys_created_by>
+            <sys_created_on>2018-12-16 16:19:07</sys_created_on>
+            <sys_id>003c7023db92e3008096a455ca9619f4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter display_value="Activities (Custom)">8f3b74efdb52e3008096a455ca961933</sys_ui_formatter>
+            <sys_ui_section caption="NULL" display_value="" name="ticket" sys_domain="global" view="ad2c7023db92e3008096a455ca96194c">a92c7023db92e3008096a455ca961952</sys_ui_section>
+            <sys_updated_by>jacebenson</sys_updated_by>
+            <sys_updated_on>2018-12-16 16:19:07</sys_updated_on>
+            <sys_user/>
+            <type>formatter</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>ticket</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>jacebenson</sys_created_by>
+            <sys_created_on>2018-12-16 16:18:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a92c7023db92e3008096a455ca961952</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>ticket</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
+            <sys_update_name>sys_ui_section_a92c7023db92e3008096a455ca961952</sys_update_name>
+            <sys_updated_by>jacebenson</sys_updated_by>
+            <sys_updated_on>2018-12-16 16:18:57</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Example View" name="example_view">ad2c7023db92e3008096a455ca96194c</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

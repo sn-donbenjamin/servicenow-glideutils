@@ -53,15 +53,15 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>jace.benson@protonmail.com</sys_created_by>
         <sys_created_on>2018-08-03 15:03:58</sys_created_on>
-        <sys_id>765c15cc0f371300fc69cdbce1050e55</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_id>384ab42fdb52e3008096a455ca96190d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>x_8821_glide_utils_std_wf</sys_name>
         <sys_package display_value="Glide Utils" source="x_8821_glide_utils">e46761ba0f521300fc69cdbce1050e46</sys_package>
         <sys_policy/>
         <sys_scope display_value="Glide Utils">e46761ba0f521300fc69cdbce1050e46</sys_scope>
-        <sys_update_name>sys_dictionary_x_8821_glide_utils_std_wf_null</sys_update_name>
-        <sys_updated_by>jace.benson@protonmail.com</sys_updated_by>
-        <sys_updated_on>2018-08-03 20:20:50</sys_updated_on>
+        <sys_update_name>sys_dictionary_x_8821_glide_utils_std_wf_NULL</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2018-12-16 16:10:46</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
